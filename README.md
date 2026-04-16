@@ -7,7 +7,7 @@
 [![Telegram](https://img.shields.io/badge/Telegram-nerual__dreming-26A5E4?style=for-the-badge&logo=telegram&logoColor=white)](https://t.me/nerual_dreming)
 [![Website](https://img.shields.io/badge/neuro--cartel.com-000?style=for-the-badge&logo=google-chrome&logoColor=white)](https://neuro-cartel.com)
 [![YouTube](https://img.shields.io/badge/YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white)](https://www.youtube.com/@nerual_dreming)
-[![Boosty](https://img.shields.io/badge/Boosty-F15F2C?style=for-the-badge&logo=data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNMTIgMkw0IDIwaDhsLTIgNGgxMkwxNCA2SDhsNC04eiIgZmlsbD0id2hpdGUiLz48L3N2Zz4=&logoColor=white)](https://boosty.to/neuro_art)
+[![Sponsor](https://img.shields.io/badge/Sponsor-ea4aaa?style=for-the-badge&logo=githubsponsors&logoColor=white)](https://github.com/timoncool/ACE-Step-Studio/blob/master/DONATE.md)
 
 </div>
 
@@ -16,41 +16,34 @@
 ### About me
 
 ```yaml
-name: Ilya Timonin
-location: Russia
+name: Ilya Timonin (Nerual Dreming)
 role: Co-Founder @ ArtGeneration.me
-focus: Portable AI apps, MCP servers, music/video/speech AI
+languages: [Russian, English]
+focus: Portable AI apps, MCP servers, music/video/speech generation
 approach: Everything local, everything free, zero cloud dependency
 ```
 
 ---
 
 <details open>
-<summary><h3>Featured Projects</h3></summary>
+<summary><h3>Projects</h3></summary>
 
 | | Project | Description |
 |---|---------|-------------|
-| 🎵 | **[ACE-Step Studio](https://github.com/timoncool/ACE-Step-Studio)** | Suno at home — local AI music studio with vocals, covers, videos |
-| 🎬 | **[VideoSOS](https://github.com/timoncool/videosos)** | AI video production in the browser (1.2k+ stars) |
-| 🎹 | **[Bulka](https://github.com/timoncool/Bulka)** | Live coding music app — Strudel + Telegram |
-| 📅 | **[GitLife](https://github.com/timoncool/gitlife)** | Your life in weeks — interactive life calendar |
-| 🤖 | **[telegram-api-mcp](https://github.com/timoncool/telegram-api-mcp)** | Full Telegram Bot API v9.6 as MCP server |
-| 🎨 | **[civitai-mcp-ultimate](https://github.com/timoncool/civitai-mcp-ultimate)** | Civitai API as MCP server — models, images, trends |
-| 📡 | **[trail-spec](https://github.com/timoncool/trail-spec)** | TRAIL — cross-MCP content tracking protocol |
-
-</details>
-
-<details>
-<summary><h3>Portable AI Apps (one-click install, runs offline)</h3></summary>
-
-| | Project | Description |
-|---|---------|-------------|
-| 🎶 | **[Foundation Music Lab](https://github.com/timoncool/Foundation-Music-Lab)** | Music generation + timeline editor |
-| 🎤 | **[VibeVoice ASR](https://github.com/timoncool/VibeVoice_ASR_portable_ru)** | Speech recognition |
-| 🔊 | **[LavaSR](https://github.com/timoncool/LavaSR_portable_ru)** | Audio quality enhancement |
-| 🗣️ | **[Qwen3-TTS](https://github.com/timoncool/Qwen3-TTS_portable_rus)** | Text-to-speech with voice cloning |
-| 👁️ | **[SuperCaption Qwen3-VL](https://github.com/timoncool/SuperCaption_Qwen3-VL)** | Image captioning |
-| 🖥️ | **[ScreenSavy.com](https://github.com/timoncool/ScreenSavy.com)** | Ambient screen generator |
+| ⭐⭐⭐⭐⭐ | **[VideoSOS](https://github.com/timoncool/videosos)** | AI video production in the browser |
+| ⭐⭐⭐ | **[Qwen3-TTS](https://github.com/timoncool/Qwen3-TTS_portable_rus)** | Portable text-to-speech with voice cloning |
+| ⭐⭐ | **[ACE-Step Studio](https://github.com/timoncool/ACE-Step-Studio)** | Suno at home — local AI music studio with vocals, covers, videos |
+| ⭐⭐ | **[Bulka](https://github.com/timoncool/Bulka)** | Live coding music app — Strudel + Telegram |
+| ⭐⭐ | **[VibeVoice ASR](https://github.com/timoncool/VibeVoice_ASR_portable_ru)** | Portable speech recognition |
+| ⭐ | **[telegram-api-mcp](https://github.com/timoncool/telegram-api-mcp)** | Full Telegram Bot API v9.6 as MCP server |
+| ⭐ | **[LavaSR](https://github.com/timoncool/LavaSR_portable_ru)** | Portable audio quality enhancement |
+| ⭐ | **[SuperCaption Qwen3-VL](https://github.com/timoncool/SuperCaption_Qwen3-VL)** | Portable image captioning |
+| ⭐ | **[civitai-mcp-ultimate](https://github.com/timoncool/civitai-mcp-ultimate)** | Civitai API as MCP server — models, images, trends |
+| ⭐ | **[trail-spec](https://github.com/timoncool/trail-spec)** | TRAIL — cross-MCP content tracking protocol |
+| ⭐ | **[GitLife](https://github.com/timoncool/gitlife)** | Your life in weeks — interactive life calendar |
+| ⭐ | **[Foundation Music Lab](https://github.com/timoncool/Foundation-Music-Lab)** | Music generation + timeline editor |
+| ⭐ | **[tg-challenge-bot](https://github.com/timoncool/tg-challenge-bot)** | AI anti-spam bot for Telegram on Cloudflare Workers |
+| ⭐ | **[ScreenSavy.com](https://github.com/timoncool/ScreenSavy.com)** | Ambient screen generator |
 
 </details>
 
@@ -77,8 +70,8 @@ approach: Everything local, everything free, zero cloud dependency
 ![GitLab](https://img.shields.io/badge/GitLab-FC6D26?logo=gitlab&logoColor=white)
 
 ![PyTorch](https://img.shields.io/badge/PyTorch-EE4C2C?logo=pytorch&logoColor=white)
-![Gradio](https://img.shields.io/badge/Gradio-F97316?logo=data:image/svg+xml;base64,PHN2Zz48L3N2Zz4=&logoColor=white)
 ![FFmpeg](https://img.shields.io/badge/FFmpeg-007808?logo=ffmpeg&logoColor=white)
+![Gradio](https://img.shields.io/badge/Gradio-F97316?logoColor=white)
 
 </details>
 
@@ -101,13 +94,17 @@ approach: Everything local, everything free, zero cloud dependency
 
 ### Support my work
 
-I build open-source AI tools. Your donations help me keep creating =)
+I build open-source AI tools for everyone. Your support helps me keep creating =)
 
-**[All methods](https://github.com/timoncool/ACE-Step-Studio/blob/master/DONATE.md)** · **[dalink.to/nerual_dreming](https://dalink.to/nerual_dreming)** · **[boosty.to/neuro_art](https://boosty.to/neuro_art)**
+[![Donate](https://img.shields.io/badge/All_donation_methods-ea4aaa?style=for-the-badge&logo=githubsponsors&logoColor=white)](https://github.com/timoncool/ACE-Step-Studio/blob/master/DONATE.md)
+[![dalink.to](https://img.shields.io/badge/Card_%2F_PayPal-dalink.to-29ABE2?style=for-the-badge&logo=paypal&logoColor=white)](https://dalink.to/nerual_dreming)
+[![Boosty](https://img.shields.io/badge/Monthly-Boosty-F15F2C?style=for-the-badge)](https://boosty.to/neuro_art)
 
-`BTC: 1E7dHL22RpyhJGVpcvKdbyZgksSYkYeEBC`<br>
-`ETH: 0xb5db65adf478983186d4897ba92fe2c25c594a0c`<br>
-`USDT: TQST9Lp2TjK6FiVkn4fwfGUee7NmkxEE7C`
+<sub>
+
+**BTC:** `1E7dHL22RpyhJGVpcvKdbyZgksSYkYeEBC` · **ETH:** `0xb5db65adf478983186d4897ba92fe2c25c594a0c` · **USDT:** `TQST9Lp2TjK6FiVkn4fwfGUee7NmkxEE7C`
+
+</sub>
 
 </div>
 
