@@ -17,8 +17,7 @@
 
 ```yaml
 name: Ilya Timonin (Nerual Dreming)
-role: Co-Founder @ ArtGeneration.me
-projects: [ArtGeneration.me, mock.dog, bulka.app, neuro-cartel.com, ScreenSavy.com, GitLife]
+role: Co-Founder @ ArtGeneration.me, bulka.app, mock.dog, and more
 languages: [Russian, English]
 focus: Portable AI apps, MCP servers, music/video/speech generation
 approach: Everything local, everything free, zero cloud dependency
