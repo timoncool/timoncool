@@ -31,6 +31,7 @@ approach: Everything local, everything free, zero cloud dependency
 | | Project | Description |
 |---|---------|-------------|
 | ⭐⭐⭐⭐⭐ | **[VideoSOS](https://github.com/timoncool/videosos)** | AI video production in the browser |
+| ⭐⭐⭐ | **[VoxCPM2 Portable](https://github.com/timoncool/VoxCPM2_portable)** | Portable TTS + voice cloning with one-click LoRA training from video/audio |
 | ⭐⭐⭐ | **[Qwen3-TTS](https://github.com/timoncool/Qwen3-TTS_portable_rus)** | Portable text-to-speech with voice cloning |
 | ⭐⭐ | **[ACE-Step Studio](https://github.com/timoncool/ACE-Step-Studio)** | Suno at home — local AI music studio with vocals, covers, videos |
 | ⭐⭐ | **[Bulka](https://github.com/timoncool/Bulka)** | Live coding music app — Strudel + Telegram |
