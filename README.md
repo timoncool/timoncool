@@ -1,7 +1,7 @@
 <div align="center">
 
 <a href="https://github.com/timoncool">
-  <img src="https://readme-typing-svg.demolab.com/?lines=AI+Researcher+%26+Open-Source+Builder;Co-Founder+of+ArtGeneration.me;Building+portable+AI+for+everyone;4500%2B+contributions+this+year&font=Fira+Code&center=true&width=500&height=50&color=58a6ff&vCenter=true&pause=1000&size=20" />
+  <img src="https://readme-typing-svg.demolab.com/?lines=AI+Researcher+%26+Open-Source+Builder;Co-Founder+of+ArtGeneration.me;Building+portable+AI+for+everyone;4800%2B+contributions+this+year&font=Fira+Code&center=true&width=500&height=50&color=58a6ff&vCenter=true&pause=1000&size=20" />
 </a>
 
 [![Telegram](https://img.shields.io/badge/Telegram-nerual__dreming-26A5E4?style=for-the-badge&logo=telegram&logoColor=white)](https://t.me/nerual_dreming)
