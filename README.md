@@ -31,20 +31,21 @@ approach: Everything local, everything free, zero cloud dependency
 | Project | Description | |
 |---------|-------------|---|
 | **[VideoSOS](https://github.com/timoncool/videosos)** | AI video production in the browser | ⭐⭐⭐⭐⭐ |
-| **[ACE-Step Studio](https://github.com/timoncool/ACE-Step-Studio)** | Suno at home — local AI music studio with vocals, covers, videos | ⭐⭐⭐⭐ |
-| **[Qwen3-TTS](https://github.com/timoncool/Qwen3-TTS_portable_rus)** | Portable text-to-speech with voice cloning | ⭐⭐⭐ |
-| **[Bulka](https://github.com/timoncool/Bulka)** | Live coding music app — Strudel + Telegram | ⭐⭐ |
-| **[VibeVoice ASR](https://github.com/timoncool/VibeVoice_ASR_portable_ru)** | Portable speech recognition | ⭐⭐ |
-| **[VoxCPM2 Portable](https://github.com/timoncool/VoxCPM2_portable)** | Portable TTS + voice cloning with one-click LoRA training from video/audio | ⭐⭐ |
-| **[telegram-api-mcp](https://github.com/timoncool/telegram-api-mcp)** | Full Telegram Bot API v9.6 as MCP server | ⭐ |
-| **[SuperCaption Qwen3-VL](https://github.com/timoncool/SuperCaption_Qwen3-VL)** | Portable image captioning | ⭐ |
-| **[LavaSR](https://github.com/timoncool/LavaSR_portable_ru)** | Portable audio quality enhancement | ⭐ |
-| **[civitai-mcp-ultimate](https://github.com/timoncool/civitai-mcp-ultimate)** | Civitai API as MCP server — models, images, trends | ⭐ |
-| **[trail-spec](https://github.com/timoncool/trail-spec)** | TRAIL — cross-MCP content tracking protocol | ⭐ |
+| **[ACE-Step Studio](https://github.com/timoncool/ACE-Step-Studio)** | Suno at home — local AI music studio with vocals, covers, videos | ⭐⭐⭐⭐⭐ |
+| **[Qwen3-TTS](https://github.com/timoncool/Qwen3-TTS_portable_rus)** | Portable text-to-speech with voice cloning | ⭐⭐⭐⭐⭐ |
+| **[VoxCPM2 Portable](https://github.com/timoncool/VoxCPM2_portable)** | Portable TTS + voice cloning with one-click LoRA training from video/audio | ⭐⭐⭐⭐ |
+| 🆕 **[HiggsAudio Studio](https://github.com/timoncool/HiggsAudio-Studio)** | Portable Higgs Audio v3 TTS — expressive speech, voice cloning, AI text director, podcast & audiobook | ⭐ |
+| **[Bulka](https://github.com/timoncool/Bulka)** | Live coding music app — Strudel + Telegram | ⭐⭐⭐⭐ |
+| **[VibeVoice ASR](https://github.com/timoncool/VibeVoice_ASR_portable_ru)** | Portable speech recognition | ⭐⭐⭐⭐ |
+| **[telegram-api-mcp](https://github.com/timoncool/telegram-api-mcp)** | Full Telegram Bot API v9.6 as MCP server | ⭐⭐⭐ |
+| **[civitai-mcp-ultimate](https://github.com/timoncool/civitai-mcp-ultimate)** | Civitai API as MCP server — models, images, trends | ⭐⭐⭐ |
+| **[SuperCaption Qwen3-VL](https://github.com/timoncool/SuperCaption_Qwen3-VL)** | Portable image captioning | ⭐⭐ |
+| **[LavaSR](https://github.com/timoncool/LavaSR_portable_ru)** | Portable audio quality enhancement | ⭐⭐ |
+| **[trail-spec](https://github.com/timoncool/trail-spec)** | TRAIL — cross-MCP content tracking protocol | ⭐⭐ |
+| **[Foundation Music Lab](https://github.com/timoncool/Foundation-Music-Lab)** | Music generation + timeline editor | ⭐⭐ |
+| **[GitLife](https://github.com/timoncool/gitlife)** | Your life in weeks — interactive life calendar | ⭐⭐ |
 | **[tg-challenge-bot](https://github.com/timoncool/tg-challenge-bot)** | AI anti-spam bot for Telegram on Cloudflare Workers | ⭐ |
 | **[ScreenSavy.com](https://github.com/timoncool/ScreenSavy.com)** | Ambient screen generator | ⭐ |
-| **[Foundation Music Lab](https://github.com/timoncool/Foundation-Music-Lab)** | Music generation + timeline editor | ⭐ |
-| **[GitLife](https://github.com/timoncool/gitlife)** | Your life in weeks — interactive life calendar | ⭐ |
 
 </details>
 
