@@ -34,7 +34,6 @@ approach: Everything local, everything free, zero cloud dependency
 | **[ACE-Step Studio](https://github.com/timoncool/ACE-Step-Studio)** | Suno at home — local AI music studio with vocals, covers, videos | ⭐⭐⭐⭐⭐ |
 | **[Qwen3-TTS](https://github.com/timoncool/Qwen3-TTS_portable_rus)** | Portable text-to-speech with voice cloning | ⭐⭐⭐⭐⭐ |
 | **[VoxCPM2 Portable](https://github.com/timoncool/VoxCPM2_portable)** | Portable TTS + voice cloning with one-click LoRA training from video/audio | ⭐⭐⭐⭐ |
-| 🆕 **[HiggsAudio Studio](https://github.com/timoncool/HiggsAudio-Studio)** | Portable Higgs Audio v3 TTS — expressive speech, voice cloning, AI text director, podcast & audiobook | ⭐ |
 | **[Bulka](https://github.com/timoncool/Bulka)** | Live coding music app — Strudel + Telegram | ⭐⭐⭐⭐ |
 | **[VibeVoice ASR](https://github.com/timoncool/VibeVoice_ASR_portable_ru)** | Portable speech recognition | ⭐⭐⭐⭐ |
 | **[telegram-api-mcp](https://github.com/timoncool/telegram-api-mcp)** | Full Telegram Bot API v9.6 as MCP server | ⭐⭐⭐ |
@@ -46,6 +45,7 @@ approach: Everything local, everything free, zero cloud dependency
 | **[GitLife](https://github.com/timoncool/gitlife)** | Your life in weeks — interactive life calendar | ⭐⭐ |
 | **[tg-challenge-bot](https://github.com/timoncool/tg-challenge-bot)** | AI anti-spam bot for Telegram on Cloudflare Workers | ⭐ |
 | **[ScreenSavy.com](https://github.com/timoncool/ScreenSavy.com)** | Ambient screen generator | ⭐ |
+| **[HiggsAudio Studio](https://github.com/timoncool/HiggsAudio-Studio)** | Portable Higgs Audio v3 TTS — expressive speech, voice cloning, AI text director, podcast & audiobook | ⭐ |
 
 </details>
 
