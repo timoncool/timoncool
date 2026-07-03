@@ -45,6 +45,7 @@ approach: Everything local, everything free, zero cloud dependency
 | **[Dub Studio](https://github.com/timoncool/dub-studio)** | Open-source CapCut for AI dubbing — local video dubbing into 6 languages with a live editor | ⭐⭐ |
 | **[trail-spec](https://github.com/timoncool/trail-spec)** | TRAIL — cross-MCP content tracking protocol | ⭐⭐ |
 | **[GitLife](https://github.com/timoncool/gitlife)** | Your life in weeks — interactive life calendar | ⭐⭐ |
+| **[AI Collab Profile](https://github.com/timoncool/ai-collab-profile)** | Claude Code skill — RPG character sheet from your AI session logs, fixed-scale stats & achievements | ⭐⭐ |
 | **[tg-challenge-bot](https://github.com/timoncool/tg-challenge-bot)** | AI anti-spam bot for Telegram on Cloudflare Workers | ⭐ |
 | **[ScreenSavy.com](https://github.com/timoncool/ScreenSavy.com)** | Ambient screen generator | ⭐ |
 | **[DotsTTS Studio](https://github.com/timoncool/DotsTTS-Studio)** | Portable dots.tts — codec-token-free TTS, 100+ languages, voice cloning | ⭐ |
