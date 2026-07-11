@@ -36,19 +36,24 @@ approach: Everything local, everything free, zero cloud dependency
 | **[VoxCPM2 Portable](https://github.com/timoncool/VoxCPM2_portable)** | Portable TTS + voice cloning with one-click LoRA training from video/audio | ⭐⭐⭐⭐ |
 | **[HiggsAudio Studio](https://github.com/timoncool/HiggsAudio-Studio)** | Portable Higgs Audio v3 TTS — expressive speech, voice cloning, AI text director, podcast & audiobook | ⭐⭐⭐⭐ |
 | **[Bulka](https://github.com/timoncool/Bulka)** | Live coding music app — Strudel + Telegram | ⭐⭐⭐⭐ |
+| **[Dub Studio](https://github.com/timoncool/dub-studio)** | Open-source CapCut for AI dubbing — local video dubbing into 6 languages with a live editor | ⭐⭐⭐⭐ |
 | **[VibeVoice ASR](https://github.com/timoncool/VibeVoice_ASR_portable_ru)** | Portable speech recognition | ⭐⭐⭐⭐ |
 | **[telegram-api-mcp](https://github.com/timoncool/telegram-api-mcp)** | Full Telegram Bot API v9.6 as MCP server | ⭐⭐⭐ |
 | **[civitai-mcp-ultimate](https://github.com/timoncool/civitai-mcp-ultimate)** | Civitai API as MCP server — models, images, trends | ⭐⭐⭐ |
+| **[Prompt Warrior](https://github.com/timoncool/prompt-warrior)** | Claude Code skill — gamified analytical portrait of your AI workflow: fixed-scale metrics, fun titles & achievements | ⭐⭐ |
+| **[Hermes RU Locale](https://github.com/timoncool/hermes-ru-locale)** | Full Russian localization for Hermes Agent Desktop — 2218 keys, one-click install | ⭐⭐ |
 | **[SuperCaption Qwen3-VL](https://github.com/timoncool/SuperCaption_Qwen3-VL)** | Portable image captioning | ⭐⭐ |
 | **[Foundation Music Lab](https://github.com/timoncool/Foundation-Music-Lab)** | Music generation + timeline editor | ⭐⭐ |
 | **[LavaSR](https://github.com/timoncool/LavaSR_portable_ru)** | Portable audio quality enhancement | ⭐⭐ |
-| **[Dub Studio](https://github.com/timoncool/dub-studio)** | Open-source CapCut for AI dubbing — local video dubbing into 6 languages with a live editor | ⭐⭐ |
 | **[trail-spec](https://github.com/timoncool/trail-spec)** | TRAIL — cross-MCP content tracking protocol | ⭐⭐ |
 | **[GitLife](https://github.com/timoncool/gitlife)** | Your life in weeks — interactive life calendar | ⭐⭐ |
-| **[Prompt Warrior](https://github.com/timoncool/prompt-warrior)** | Claude Code skill — gamified analytical portrait of your AI workflow: fixed-scale metrics, fun titles & achievements | ⭐⭐ |
+| **[Higgs Ultimate](https://github.com/timoncool/Higgs-Ultimate)** | Native desktop TTS & voice cloning — Higgs Audio v3 engine, offline, batch mode | ⭐⭐ |
 | **[tg-challenge-bot](https://github.com/timoncool/tg-challenge-bot)** | AI anti-spam bot for Telegram on Cloudflare Workers | ⭐ |
 | **[ScreenSavy.com](https://github.com/timoncool/ScreenSavy.com)** | Ambient screen generator | ⭐ |
 | **[DotsTTS Studio](https://github.com/timoncool/DotsTTS-Studio)** | Portable dots.tts — codec-token-free TTS, 100+ languages, voice cloning | ⭐ |
+| **[Dungeon Ultimate](https://github.com/timoncool/dungeon-ultimate)** | Local AI dungeon master — roleplay with inline FLUX images and voice narration, 100% offline | ⭐ |
+| **[dream-skill](https://github.com/timoncool/dream-skill)** | Memory consolidation for Claude Code — dream/wake passes, snapshots, one-command rollback | ⭐ |
+| **[satori](https://github.com/timoncool/satori)** | Self-learning loop for Claude Code — corrections and failures become skills, behind a human gate | ⭐ |
 
 </details>
 
