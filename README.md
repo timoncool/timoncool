@@ -34,6 +34,7 @@ approach: Everything local, everything free, zero cloud dependency
 | **[ACE-Step Studio](https://github.com/timoncool/ACE-Step-Studio)** | Suno at home — local AI music studio with vocals, covers, videos | ⭐⭐⭐⭐⭐ |
 | **[Qwen3-TTS](https://github.com/timoncool/Qwen3-TTS_portable_rus)** | Portable text-to-speech with voice cloning | ⭐⭐⭐⭐⭐ |
 | **[Dub Studio](https://github.com/timoncool/dub-studio)** | Open-source CapCut for AI dubbing — re-voice any video with a cloned voice, translated captions & on-screen text, in a live editor | ⭐⭐⭐⭐⭐ |
+| **[YuE2 Studio](https://github.com/timoncool/YuE2-Studio)** | Native desktop studio for YuE2 — full songs with vocals and an editable score, covers, karaoke clips, from 6 GB VRAM | ⭐⭐⭐⭐ |
 | **[HiggsAudio Studio](https://github.com/timoncool/HiggsAudio-Studio)** | Portable Higgs Audio v3 TTS — expressive speech, voice cloning, AI text director, podcast & audiobook | ⭐⭐⭐⭐ |
 | **[VoxCPM2 Portable](https://github.com/timoncool/VoxCPM2_portable)** | Portable TTS + voice cloning with one-click LoRA training from video/audio | ⭐⭐⭐⭐ |
 | **[MiniMax Music3 Studio](https://github.com/timoncool/MiniMax-Music3-Studio)** | Native local/cloud AI music studio powered by MiniMax Music 3 | ⭐⭐⭐⭐ |
@@ -42,7 +43,6 @@ approach: Everything local, everything free, zero cloud dependency
 | **[Hermes RU Locale](https://github.com/timoncool/hermes-ru-locale)** | Full Russian localization for Hermes Agent Desktop — 2218 keys, one-click install | ⭐⭐⭐ |
 | **[Higgs Ultimate](https://github.com/timoncool/Higgs-Ultimate)** | Native desktop TTS & voice cloning — Higgs Audio v3 engine, offline, batch mode | ⭐⭐⭐ |
 | **[telegram-api-mcp](https://github.com/timoncool/telegram-api-mcp)** | Full Telegram Bot API v10.2 as MCP server — all 185 methods | ⭐⭐⭐ |
-| **[YuE2 Studio](https://github.com/timoncool/YuE2-Studio)** | Native desktop studio for YuE2 — full songs with vocals and an editable score, covers, karaoke clips, from 6 GB VRAM | ⭐⭐⭐ |
 | **[Prompt Warrior](https://github.com/timoncool/prompt-warrior)** | Claude Code skill — gamified analytical portrait of your AI workflow: fixed-scale metrics, fun titles & achievements | ⭐⭐⭐ |
 | **[civitai-mcp-ultimate](https://github.com/timoncool/civitai-mcp-ultimate)** | Civitai API as MCP server — models, images, trends | ⭐⭐⭐ |
 | **[SuperCaption Qwen3-VL](https://github.com/timoncool/SuperCaption_Qwen3-VL)** | Portable image & video captioning + tagging — Qwen3-VL, 50+ templates | ⭐⭐ |
@@ -51,8 +51,8 @@ approach: Everything local, everything free, zero cloud dependency
 | **[LavaSR](https://github.com/timoncool/LavaSR_portable_ru)** | Portable audio quality enhancement | ⭐⭐ |
 | **[GitLife](https://github.com/timoncool/gitlife)** | Your life as a GitHub contribution graph — life-in-weeks with health factors & leaderboard | ⭐⭐ |
 | **[trail-spec](https://github.com/timoncool/trail-spec)** | TRAIL — cross-MCP content tracking protocol | ⭐⭐ |
+| **[DotsTTS Studio](https://github.com/timoncool/DotsTTS-Studio)** | Portable dots.tts — codec-token-free TTS, 100+ languages, voice cloning | ⭐⭐ |
 | **[tg-challenge-bot](https://github.com/timoncool/tg-challenge-bot)** | AI challenge bot for Telegram art communities — themed contests, voting & leaderboards on Cloudflare Workers | ⭐ |
-| **[DotsTTS Studio](https://github.com/timoncool/DotsTTS-Studio)** | Portable dots.tts — codec-token-free TTS, 100+ languages, voice cloning | ⭐ |
 | **[ScreenSavy.com](https://github.com/timoncool/ScreenSavy.com)** | Ambient screen generator | ⭐ |
 | **[dream-skill](https://github.com/timoncool/dream-skill)** | Memory consolidation for Claude Code — dream/wake passes, snapshots, one-command rollback | ⭐ |
 | **[satori](https://github.com/timoncool/satori)** | Self-learning loop for Claude Code — corrections and failures become skills; automatic, visible, one-call reversible | ⭐ |
