@@ -32,9 +32,9 @@ approach: Everything local, everything free, zero cloud dependency
 |---------|-------------|---|
 | **[VideoSOS](https://github.com/timoncool/videosos)** | AI video production in the browser | ⭐⭐⭐⭐⭐ |
 | **[ACE-Step Studio](https://github.com/timoncool/ACE-Step-Studio)** | Suno at home — local AI music studio with vocals, covers, videos | ⭐⭐⭐⭐⭐ |
+| **[YuE2 Studio](https://github.com/timoncool/YuE2-Studio)** | Native desktop studio for YuE2 — full songs with vocals and an editable score, covers, karaoke clips, from 6 GB VRAM | ⭐⭐⭐⭐⭐ |
 | **[Qwen3-TTS](https://github.com/timoncool/Qwen3-TTS_portable_rus)** | Portable text-to-speech with voice cloning | ⭐⭐⭐⭐⭐ |
 | **[Dub Studio](https://github.com/timoncool/dub-studio)** | Open-source CapCut for AI dubbing — re-voice any video with a cloned voice, translated captions & on-screen text, in a live editor | ⭐⭐⭐⭐⭐ |
-| **[YuE2 Studio](https://github.com/timoncool/YuE2-Studio)** | Native desktop studio for YuE2 — full songs with vocals and an editable score, covers, karaoke clips, from 6 GB VRAM | ⭐⭐⭐⭐ |
 | **[HiggsAudio Studio](https://github.com/timoncool/HiggsAudio-Studio)** | Portable Higgs Audio v3 TTS — expressive speech, voice cloning, AI text director, podcast & audiobook | ⭐⭐⭐⭐ |
 | **[VoxCPM2 Portable](https://github.com/timoncool/VoxCPM2_portable)** | Portable TTS + voice cloning with one-click LoRA training from video/audio | ⭐⭐⭐⭐ |
 | **[MiniMax Music3 Studio](https://github.com/timoncool/MiniMax-Music3-Studio)** | Native local/cloud AI music studio powered by MiniMax Music 3 | ⭐⭐⭐⭐ |
@@ -56,6 +56,10 @@ approach: Everything local, everything free, zero cloud dependency
 | **[ScreenSavy.com](https://github.com/timoncool/ScreenSavy.com)** | Ambient screen generator | ⭐ |
 | **[dream-skill](https://github.com/timoncool/dream-skill)** | Memory consolidation for Claude Code — dream/wake passes, snapshots, one-command rollback | ⭐ |
 | **[satori](https://github.com/timoncool/satori)** | Self-learning loop for Claude Code — corrections and failures become skills; automatic, visible, one-call reversible | ⭐ |
+| **[Strudel for Godot](https://github.com/timoncool/godot-strudel)** | Strudel live-coding engine ported to GDScript — paste browser patterns unchanged and hear them in your game | ⭐ |
+| **[PiP Twin](https://github.com/timoncool/pip-twin)** | Chrome extension — a second window with the same playing video: PiP on the monitor, twin fullscreen on the TV | ⭐ |
+| **[HotA MCP](https://github.com/timoncool/hota-mcp)** | MCP server that lets an AI agent play Heroes III: Horn of the Abyss as a real player — same screen, same buttons | ⭐ |
+| **[Jarvis Codex Bot](https://github.com/timoncool/jarvis-codex-bot)** | Telegram assistant on official Codex + OpenRouter — text, voice, images, files, self-install skill | ⭐ |
 
 </details>
 
