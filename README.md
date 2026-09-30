@@ -1,15 +1,29 @@
 <div align="center">
 
 <a href="https://github.com/timoncool">
-  <img src="https://readme-typing-svg.demolab.com/?lines=AI+Researcher+%26+Open-Source+Builder;Co-Founder+of+ArtGeneration.me;Building+portable+AI+for+everyone;8500%2B+contributions+since+2017&font=Fira+Code&center=true&width=500&height=50&color=58a6ff&vCenter=true&pause=1000&size=20" />
+  <img src="https://readme-typing-svg.demolab.com/?lines=Free+local+AI+apps+for+everyone;Music+%C2%B7+Speech+%C2%B7+Video;Portable.+One+click.+Local-first.;Co-Founder+of+ArtGeneration.me&font=Fira+Code&center=true&width=500&height=50&color=58a6ff&vCenter=true&pause=1000&size=20" />
 </a>
 
+**I build free, open-source AI studios for music, speech and video — local-first, one click, no subscriptions.**
+
 [![Telegram](https://img.shields.io/badge/Telegram-nerual__dreming-26A5E4?style=for-the-badge&logo=telegram&logoColor=white)](https://t.me/nerual_dreming)
-[![Website](https://img.shields.io/badge/neuro--cartel.com-000?style=for-the-badge&logo=google-chrome&logoColor=white)](https://neuro-cartel.com)
 [![YouTube](https://img.shields.io/badge/YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white)](https://www.youtube.com/@nerual_dreming)
-[![Sponsor](https://img.shields.io/badge/Sponsor-ea4aaa?style=for-the-badge&logo=githubsponsors&logoColor=white)](https://github.com/timoncool/ACE-Step-Studio/blob/master/DONATE.md)
+[![Website](https://img.shields.io/badge/neuro--cartel.com-000?style=for-the-badge&logo=google-chrome&logoColor=white)](https://neuro-cartel.com)
+[![Support](https://img.shields.io/badge/Support_my_work-ea4aaa?style=for-the-badge&logo=githubsponsors&logoColor=white)](#support-my-work)
 
 </div>
+
+---
+
+### Flagship apps
+
+| App | What it does | |
+|---|---|---|
+| **[YuE2 Studio](https://github.com/timoncool/YuE2-Studio)** | Full songs with vocals and an editable score, covers, karaoke clips — from 6 GB VRAM | ![stars](https://img.shields.io/github/stars/timoncool/YuE2-Studio?style=flat-square&label=%E2%98%85&labelColor=0d1117&color=1f6feb) ![downloads](https://img.shields.io/github/downloads/timoncool/YuE2-Studio/total?style=flat-square&label=%E2%86%93&labelColor=0d1117&color=238636) |
+| **[ACE-Step Studio](https://github.com/timoncool/ACE-Step-Studio)** | Suno at home — local AI music studio with vocals, covers, videos | ![stars](https://img.shields.io/github/stars/timoncool/ACE-Step-Studio?style=flat-square&label=%E2%98%85&labelColor=0d1117&color=1f6feb) ![downloads](https://img.shields.io/github/downloads/timoncool/ACE-Step-Studio/total?style=flat-square&label=%E2%86%93&labelColor=0d1117&color=238636) |
+| **[MiniMax Music3 Studio](https://github.com/timoncool/MiniMax-Music3-Studio)** | Native local/cloud AI music studio powered by MiniMax Music 3 | ![stars](https://img.shields.io/github/stars/timoncool/MiniMax-Music3-Studio?style=flat-square&label=%E2%98%85&labelColor=0d1117&color=1f6feb) ![downloads](https://img.shields.io/github/downloads/timoncool/MiniMax-Music3-Studio/total?style=flat-square&label=%E2%86%93&labelColor=0d1117&color=238636) |
+| **[Dub Studio](https://github.com/timoncool/dub-studio)** | Open-source CapCut for AI dubbing — re-voice any video with a cloned voice | ![stars](https://img.shields.io/github/stars/timoncool/dub-studio?style=flat-square&label=%E2%98%85&labelColor=0d1117&color=1f6feb) ![downloads](https://img.shields.io/github/downloads/timoncool/dub-studio/total?style=flat-square&label=%E2%86%93&labelColor=0d1117&color=238636) |
+| **[VideoSOS](https://github.com/timoncool/videosos)** | AI video production in the browser — 100+ models, lip sync, image-to-video | ![stars](https://img.shields.io/github/stars/timoncool/videosos?style=flat-square&label=%E2%98%85&labelColor=0d1117&color=1f6feb) |
 
 ---
 
@@ -17,15 +31,40 @@
 
 ```yaml
 name: Ilya Timonin (Nerual Dreming)
-role: Co-Founder @ ArtGeneration.me, bulka.app, mock.dog, and more
-languages: [Russian, English]
-focus: Portable AI apps, MCP servers, music/video/speech generation
+building: Free portable AI apps — music, speech, video, MCP servers
 approach: Everything local, everything free, zero cloud dependency
+background: Co-Founder @ ArtGeneration.me — 400+ image & video models in one place,
+            so I know which models are worth running locally
+also: bulka.app, mock.dog
+languages: [Russian, English]
 ```
 
 ---
 
-<details open>
+<div align="center">
+
+### Support my work
+
+Every app here is free and open source.<br />
+Your support is what lets me spend my time on them instead of a day job.
+
+[![Boosty](https://img.shields.io/badge/Monthly-Boosty-F15F2C?style=for-the-badge)](https://boosty.to/neuro_art)
+[![dalink.to](https://img.shields.io/badge/Card_%2F_PayPal-dalink.to-29ABE2?style=for-the-badge&logo=paypal&logoColor=white)](https://dalink.to/nerual_dreming)
+[![Donate](https://img.shields.io/badge/All_donation_methods-ea4aaa?style=for-the-badge&logo=githubsponsors&logoColor=white)](https://github.com/timoncool/ACE-Step-Studio/blob/master/DONATE.md)
+
+<sub>
+
+**BTC:** `1E7dHL22RpyhJGVpcvKdbyZgksSYkYeEBC` · **ETH:** `0xb5db65adf478983186d4897ba92fe2c25c594a0c` · **USDT:** `TQST9Lp2TjK6FiVkn4fwfGUee7NmkxEE7C`
+
+</sub>
+
+</div>
+
+---
+
+### All projects
+
+<details>
 <summary><h3>🎵 Music · 6</h3></summary>
 
 | Project | Description | Stars |
@@ -39,7 +78,7 @@ approach: Everything local, everything free, zero cloud dependency
 
 </details>
 
-<details open>
+<details>
 <summary><h3>🗣️ Speech & Audio · 7</h3></summary>
 
 | Project | Description | Stars |
@@ -54,7 +93,7 @@ approach: Everything local, everything free, zero cloud dependency
 
 </details>
 
-<details open>
+<details>
 <summary><h3>🎬 Video & Vision · 3</h3></summary>
 
 | Project | Description | Stars |
@@ -134,26 +173,6 @@ approach: Everything local, everything free, zero cloud dependency
 <img src="https://streak-stats.demolab.com/?user=timoncool&theme=github-dark-blue&hide_border=true&background=0d1117&ring=58a6ff&fire=58a6ff&currStreakLabel=58a6ff" />
 
 <img src="https://raw.githubusercontent.com/timoncool/timoncool/main/dist/activity-graph.svg" width="100%" />
-
-</div>
-
----
-
-<div align="center">
-
-### Support my work
-
-I build open-source AI tools for everyone. Your support helps me keep creating =)
-
-[![Donate](https://img.shields.io/badge/All_donation_methods-ea4aaa?style=for-the-badge&logo=githubsponsors&logoColor=white)](https://github.com/timoncool/ACE-Step-Studio/blob/master/DONATE.md)
-[![dalink.to](https://img.shields.io/badge/Card_%2F_PayPal-dalink.to-29ABE2?style=for-the-badge&logo=paypal&logoColor=white)](https://dalink.to/nerual_dreming)
-[![Boosty](https://img.shields.io/badge/Monthly-Boosty-F15F2C?style=for-the-badge)](https://boosty.to/neuro_art)
-
-<sub>
-
-**BTC:** `1E7dHL22RpyhJGVpcvKdbyZgksSYkYeEBC` · **ETH:** `0xb5db65adf478983186d4897ba92fe2c25c594a0c` · **USDT:** `TQST9Lp2TjK6FiVkn4fwfGUee7NmkxEE7C`
-
-</sub>
 
 </div>
 
