@@ -26,42 +26,83 @@ approach: Everything local, everything free, zero cloud dependency
 ---
 
 <details open>
-<summary><h3>Projects</h3></summary>
+<summary><h3>🎵 Music · 6</h3></summary>
 
-| Project | Description | |
-|---------|-------------|---|
-| **[VideoSOS](https://github.com/timoncool/videosos)** | AI video production in the browser | ⭐⭐⭐⭐⭐ |
-| **[ACE-Step Studio](https://github.com/timoncool/ACE-Step-Studio)** | Suno at home — local AI music studio with vocals, covers, videos | ⭐⭐⭐⭐⭐ |
-| **[YuE2 Studio](https://github.com/timoncool/YuE2-Studio)** | Native desktop studio for YuE2 — full songs with vocals and an editable score, covers, karaoke clips, from 6 GB VRAM | ⭐⭐⭐⭐⭐ |
-| **[Qwen3-TTS](https://github.com/timoncool/Qwen3-TTS_portable_rus)** | Portable text-to-speech with voice cloning | ⭐⭐⭐⭐⭐ |
-| **[Dub Studio](https://github.com/timoncool/dub-studio)** | Open-source CapCut for AI dubbing — re-voice any video with a cloned voice, translated captions & on-screen text, in a live editor | ⭐⭐⭐⭐⭐ |
-| **[HiggsAudio Studio](https://github.com/timoncool/HiggsAudio-Studio)** | Portable Higgs Audio v3 TTS — expressive speech, voice cloning, AI text director, podcast & audiobook | ⭐⭐⭐⭐ |
-| **[VoxCPM2 Portable](https://github.com/timoncool/VoxCPM2_portable)** | Portable TTS + voice cloning with one-click LoRA training from video/audio | ⭐⭐⭐⭐ |
-| **[MiniMax Music3 Studio](https://github.com/timoncool/MiniMax-Music3-Studio)** | Native local/cloud AI music studio powered by MiniMax Music 3 | ⭐⭐⭐⭐ |
-| **[Bulka](https://github.com/timoncool/Bulka)** | Live-coding music in the browser — Strudel fork with a built-in AI agent | ⭐⭐⭐⭐ |
-| **[VibeVoice ASR](https://github.com/timoncool/VibeVoice_ASR_portable_ru)** | Portable speech recognition | ⭐⭐⭐⭐ |
-| **[Hermes RU Locale](https://github.com/timoncool/hermes-ru-locale)** | Full Russian localization for Hermes Agent Desktop — 2218 keys, one-click install | ⭐⭐⭐ |
-| **[Higgs Ultimate](https://github.com/timoncool/Higgs-Ultimate)** | Native desktop TTS & voice cloning — Higgs Audio v3 engine, offline, batch mode | ⭐⭐⭐ |
-| **[telegram-api-mcp](https://github.com/timoncool/telegram-api-mcp)** | Full Telegram Bot API v10.2 as MCP server — all 185 methods | ⭐⭐⭐ |
-| **[Prompt Warrior](https://github.com/timoncool/prompt-warrior)** | Claude Code skill — gamified analytical portrait of your AI workflow: fixed-scale metrics, fun titles & achievements | ⭐⭐⭐ |
-| **[civitai-mcp-ultimate](https://github.com/timoncool/civitai-mcp-ultimate)** | Civitai API as MCP server — models, images, trends | ⭐⭐⭐ |
-| **[SuperCaption Qwen3-VL](https://github.com/timoncool/SuperCaption_Qwen3-VL)** | Portable image & video captioning + tagging — Qwen3-VL, 50+ templates | ⭐⭐ |
-| **[Foundation Music Lab](https://github.com/timoncool/Foundation-Music-Lab)** | Music generation + timeline editor | ⭐⭐ |
-| **[Dungeon Ultimate](https://github.com/timoncool/dungeon-ultimate)** | Offline AI dungeon master — full D&D mechanics, real 3D dice, uncensored on-device image generation & voice | ⭐⭐ |
-| **[LavaSR](https://github.com/timoncool/LavaSR_portable_ru)** | Portable audio quality enhancement | ⭐⭐ |
-| **[GitLife](https://github.com/timoncool/gitlife)** | Your life as a GitHub contribution graph — life-in-weeks with health factors & leaderboard | ⭐⭐ |
-| **[trail-spec](https://github.com/timoncool/trail-spec)** | TRAIL — cross-MCP content tracking protocol | ⭐⭐ |
-| **[DotsTTS Studio](https://github.com/timoncool/DotsTTS-Studio)** | Portable dots.tts — codec-token-free TTS, 100+ languages, voice cloning | ⭐⭐ |
-| **[tg-challenge-bot](https://github.com/timoncool/tg-challenge-bot)** | AI challenge bot for Telegram art communities — themed contests, voting & leaderboards on Cloudflare Workers | ⭐ |
-| **[ScreenSavy.com](https://github.com/timoncool/ScreenSavy.com)** | Ambient screen generator | ⭐ |
-| **[dream-skill](https://github.com/timoncool/dream-skill)** | Memory consolidation for Claude Code — dream/wake passes, snapshots, one-command rollback | ⭐ |
-| **[satori](https://github.com/timoncool/satori)** | Self-learning loop for Claude Code — corrections and failures become skills; automatic, visible, one-call reversible | ⭐ |
-| **[Strudel for Godot](https://github.com/timoncool/godot-strudel)** | Strudel live-coding engine ported to GDScript — paste browser patterns unchanged and hear them in your game | ⭐ |
-| **[PiP Twin](https://github.com/timoncool/pip-twin)** | Chrome extension — a second window with the same playing video: PiP on the monitor, twin fullscreen on the TV | ⭐ |
-| **[HotA MCP](https://github.com/timoncool/hota-mcp)** | MCP server that lets an AI agent play Heroes III: Horn of the Abyss as a real player — same screen, same buttons | ⭐ |
-| **[Jarvis Codex Bot](https://github.com/timoncool/jarvis-codex-bot)** | Telegram assistant on official Codex + OpenRouter — text, voice, images, files, self-install skill | ⭐ |
+| Project | Description | Stars |
+|---|---|---|
+| **[ACE-Step Studio](https://github.com/timoncool/ACE-Step-Studio)** | Suno at home — local AI music studio with vocals, covers, videos | ![stars](https://img.shields.io/github/stars/timoncool/ACE-Step-Studio?style=flat-square&label=%E2%98%85&labelColor=0d1117&color=1f6feb) |
+| **[YuE2 Studio](https://github.com/timoncool/YuE2-Studio)** | Full songs with vocals and an editable score, covers, karaoke clips, from 6 GB VRAM | ![stars](https://img.shields.io/github/stars/timoncool/YuE2-Studio?style=flat-square&label=%E2%98%85&labelColor=0d1117&color=1f6feb) |
+| **[MiniMax Music3 Studio](https://github.com/timoncool/MiniMax-Music3-Studio)** | Native local/cloud AI music studio powered by MiniMax Music 3 | ![stars](https://img.shields.io/github/stars/timoncool/MiniMax-Music3-Studio?style=flat-square&label=%E2%98%85&labelColor=0d1117&color=1f6feb) |
+| **[Bulka](https://github.com/timoncool/Bulka)** | Live-coding music in the browser — Strudel fork with a built-in AI agent | ![stars](https://img.shields.io/github/stars/timoncool/Bulka?style=flat-square&label=%E2%98%85&labelColor=0d1117&color=1f6feb) |
+| **[Foundation Music Lab](https://github.com/timoncool/Foundation-Music-Lab)** | Music generation + timeline editor | ![stars](https://img.shields.io/github/stars/timoncool/Foundation-Music-Lab?style=flat-square&label=%E2%98%85&labelColor=0d1117&color=1f6feb) |
+| **[Strudel for Godot](https://github.com/timoncool/godot-strudel)** | Strudel live-coding engine ported to GDScript — browser patterns play in your game | ![stars](https://img.shields.io/github/stars/timoncool/godot-strudel?style=flat-square&label=%E2%98%85&labelColor=0d1117&color=1f6feb) |
 
 </details>
+
+<details open>
+<summary><h3>🗣️ Speech & Audio · 7</h3></summary>
+
+| Project | Description | Stars |
+|---|---|---|
+| **[Qwen3-TTS](https://github.com/timoncool/Qwen3-TTS_portable_rus)** | Portable text-to-speech with voice cloning | ![stars](https://img.shields.io/github/stars/timoncool/Qwen3-TTS_portable_rus?style=flat-square&label=%E2%98%85&labelColor=0d1117&color=1f6feb) |
+| **[HiggsAudio Studio](https://github.com/timoncool/HiggsAudio-Studio)** | Higgs Audio v3 TTS — expressive speech, voice cloning, AI text director, podcasts & audiobooks | ![stars](https://img.shields.io/github/stars/timoncool/HiggsAudio-Studio?style=flat-square&label=%E2%98%85&labelColor=0d1117&color=1f6feb) |
+| **[VoxCPM2 Portable](https://github.com/timoncool/VoxCPM2_portable)** | TTS + voice cloning with one-click LoRA training from video/audio | ![stars](https://img.shields.io/github/stars/timoncool/VoxCPM2_portable?style=flat-square&label=%E2%98%85&labelColor=0d1117&color=1f6feb) |
+| **[VibeVoice ASR](https://github.com/timoncool/VibeVoice_ASR_portable_ru)** | Portable speech recognition | ![stars](https://img.shields.io/github/stars/timoncool/VibeVoice_ASR_portable_ru?style=flat-square&label=%E2%98%85&labelColor=0d1117&color=1f6feb) |
+| **[Higgs Ultimate](https://github.com/timoncool/Higgs-Ultimate)** | Native desktop TTS & voice cloning — offline, batch mode | ![stars](https://img.shields.io/github/stars/timoncool/Higgs-Ultimate?style=flat-square&label=%E2%98%85&labelColor=0d1117&color=1f6feb) |
+| **[LavaSR](https://github.com/timoncool/LavaSR_portable_ru)** | Portable audio quality enhancement | ![stars](https://img.shields.io/github/stars/timoncool/LavaSR_portable_ru?style=flat-square&label=%E2%98%85&labelColor=0d1117&color=1f6feb) |
+| **[DotsTTS Studio](https://github.com/timoncool/DotsTTS-Studio)** | dots.tts — codec-token-free TTS, 100+ languages, voice cloning | ![stars](https://img.shields.io/github/stars/timoncool/DotsTTS-Studio?style=flat-square&label=%E2%98%85&labelColor=0d1117&color=1f6feb) |
+
+</details>
+
+<details open>
+<summary><h3>🎬 Video & Vision · 3</h3></summary>
+
+| Project | Description | Stars |
+|---|---|---|
+| **[VideoSOS](https://github.com/timoncool/videosos)** | AI video production in the browser — 100+ models, lip sync, image-to-video | ![stars](https://img.shields.io/github/stars/timoncool/videosos?style=flat-square&label=%E2%98%85&labelColor=0d1117&color=1f6feb) |
+| **[Dub Studio](https://github.com/timoncool/dub-studio)** | Open-source CapCut for AI dubbing — re-voice any video with a cloned voice | ![stars](https://img.shields.io/github/stars/timoncool/dub-studio?style=flat-square&label=%E2%98%85&labelColor=0d1117&color=1f6feb) |
+| **[SuperCaption Qwen3-VL](https://github.com/timoncool/SuperCaption_Qwen3-VL)** | Image & video captioning + tagging — Qwen3-VL, 50+ templates | ![stars](https://img.shields.io/github/stars/timoncool/SuperCaption_Qwen3-VL?style=flat-square&label=%E2%98%85&labelColor=0d1117&color=1f6feb) |
+
+</details>
+
+<details>
+<summary><h3>🔌 MCP Servers · 4</h3></summary>
+
+| Project | Description | Stars |
+|---|---|---|
+| **[telegram-api-mcp](https://github.com/timoncool/telegram-api-mcp)** | Full Telegram Bot API as MCP server — all 185 methods | ![stars](https://img.shields.io/github/stars/timoncool/telegram-api-mcp?style=flat-square&label=%E2%98%85&labelColor=0d1117&color=1f6feb) |
+| **[civitai-mcp-ultimate](https://github.com/timoncool/civitai-mcp-ultimate)** | Civitai API as MCP server — models, images, trends | ![stars](https://img.shields.io/github/stars/timoncool/civitai-mcp-ultimate?style=flat-square&label=%E2%98%85&labelColor=0d1117&color=1f6feb) |
+| **[trail-spec](https://github.com/timoncool/trail-spec)** | TRAIL — cross-MCP content tracking protocol | ![stars](https://img.shields.io/github/stars/timoncool/trail-spec?style=flat-square&label=%E2%98%85&labelColor=0d1117&color=1f6feb) |
+| **[HotA MCP](https://github.com/timoncool/hota-mcp)** | An AI agent plays Heroes III: Horn of the Abyss as a real player | ![stars](https://img.shields.io/github/stars/timoncool/hota-mcp?style=flat-square&label=%E2%98%85&labelColor=0d1117&color=1f6feb) |
+
+</details>
+
+<details>
+<summary><h3>🧠 AI Agents & Claude Code · 4</h3></summary>
+
+| Project | Description | Stars |
+|---|---|---|
+| **[Prompt Warrior](https://github.com/timoncool/prompt-warrior)** | Gamified analytical portrait of your AI workflow | ![stars](https://img.shields.io/github/stars/timoncool/prompt-warrior?style=flat-square&label=%E2%98%85&labelColor=0d1117&color=1f6feb) |
+| **[dream-skill](https://github.com/timoncool/dream-skill)** | Memory consolidation for Claude Code — dream/wake passes, one-command rollback | ![stars](https://img.shields.io/github/stars/timoncool/dream-skill?style=flat-square&label=%E2%98%85&labelColor=0d1117&color=1f6feb) |
+| **[satori](https://github.com/timoncool/satori)** | Self-learning loop for Claude Code — corrections become skills | ![stars](https://img.shields.io/github/stars/timoncool/satori?style=flat-square&label=%E2%98%85&labelColor=0d1117&color=1f6feb) |
+| **[Jarvis Codex Bot](https://github.com/timoncool/jarvis-codex-bot)** | Telegram assistant on Codex + OpenRouter — text, voice, images, files | ![stars](https://img.shields.io/github/stars/timoncool/jarvis-codex-bot?style=flat-square&label=%E2%98%85&labelColor=0d1117&color=1f6feb) |
+
+</details>
+
+<details>
+<summary><h3>🧰 Tools & Fun · 6</h3></summary>
+
+| Project | Description | Stars |
+|---|---|---|
+| **[Hermes RU Locale](https://github.com/timoncool/hermes-ru-locale)** | Full Russian localization for Hermes Agent Desktop | ![stars](https://img.shields.io/github/stars/timoncool/hermes-ru-locale?style=flat-square&label=%E2%98%85&labelColor=0d1117&color=1f6feb) |
+| **[Dungeon Ultimate](https://github.com/timoncool/dungeon-ultimate)** | Offline AI dungeon master — D&D mechanics, 3D dice, image generation & voice | ![stars](https://img.shields.io/github/stars/timoncool/dungeon-ultimate?style=flat-square&label=%E2%98%85&labelColor=0d1117&color=1f6feb) |
+| **[GitLife](https://github.com/timoncool/gitlife)** | Your life as a GitHub contribution graph | ![stars](https://img.shields.io/github/stars/timoncool/gitlife?style=flat-square&label=%E2%98%85&labelColor=0d1117&color=1f6feb) |
+| **[tg-challenge-bot](https://github.com/timoncool/tg-challenge-bot)** | AI challenge bot for Telegram art communities | ![stars](https://img.shields.io/github/stars/timoncool/tg-challenge-bot?style=flat-square&label=%E2%98%85&labelColor=0d1117&color=1f6feb) |
+| **[ScreenSavy.com](https://github.com/timoncool/ScreenSavy.com)** | Ambient screen generator | ![stars](https://img.shields.io/github/stars/timoncool/ScreenSavy.com?style=flat-square&label=%E2%98%85&labelColor=0d1117&color=1f6feb) |
+| **[PiP Twin](https://github.com/timoncool/pip-twin)** | Chrome extension — the same playing video in a second window | ![stars](https://img.shields.io/github/stars/timoncool/pip-twin?style=flat-square&label=%E2%98%85&labelColor=0d1117&color=1f6feb) |
+
+</details>
+
 
 <details>
 <summary><h3>Tech Stack</h3></summary>
