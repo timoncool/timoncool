@@ -86,6 +86,7 @@ approach: Everything local, everything free, zero cloud dependency
 | **[dream-skill](https://github.com/timoncool/dream-skill)** | Memory consolidation for Claude Code — dream/wake passes, one-command rollback | ![stars](https://img.shields.io/github/stars/timoncool/dream-skill?style=flat-square&label=%E2%98%85&labelColor=0d1117&color=1f6feb) |
 | **[satori](https://github.com/timoncool/satori)** | Self-learning loop for Claude Code — corrections become skills | ![stars](https://img.shields.io/github/stars/timoncool/satori?style=flat-square&label=%E2%98%85&labelColor=0d1117&color=1f6feb) |
 | **[Jarvis Codex Bot](https://github.com/timoncool/jarvis-codex-bot)** | Telegram assistant on Codex + OpenRouter — text, voice, images, files | ![stars](https://img.shields.io/github/stars/timoncool/jarvis-codex-bot?style=flat-square&label=%E2%98%85&labelColor=0d1117&color=1f6feb) |
+| **[Prompt Layer](https://github.com/timoncool/prompt-layer)** | Invisible prompt layer for Claude Code — Haiku cleans and sharpens every prompt | ![stars](https://img.shields.io/github/stars/timoncool/prompt-layer?style=flat-square&label=%E2%98%85&labelColor=0d1117&color=1f6feb) |
 
 </details>
 
