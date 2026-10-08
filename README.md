@@ -30,8 +30,8 @@ approach: Everything local, everything free, zero cloud dependency
 
 | Project | Description | Stars |
 |---|---|---|
-| **[ACE-Step Studio](https://github.com/timoncool/ACE-Step-Studio)** | Suno at home — local AI music studio with vocals, covers, videos | ![stars](https://img.shields.io/github/stars/timoncool/ACE-Step-Studio?style=flat-square&label=%E2%98%85&labelColor=0d1117&color=1f6feb) |
 | **[YuE2 Studio](https://github.com/timoncool/YuE2-Studio)** | Full songs with vocals and an editable score, covers, karaoke clips, from 6 GB VRAM | ![stars](https://img.shields.io/github/stars/timoncool/YuE2-Studio?style=flat-square&label=%E2%98%85&labelColor=0d1117&color=1f6feb) |
+| **[ACE-Step Studio](https://github.com/timoncool/ACE-Step-Studio)** | Suno at home — local AI music studio with vocals, covers, videos | ![stars](https://img.shields.io/github/stars/timoncool/ACE-Step-Studio?style=flat-square&label=%E2%98%85&labelColor=0d1117&color=1f6feb) |
 | **[MiniMax Music3 Studio](https://github.com/timoncool/MiniMax-Music3-Studio)** | Native local/cloud AI music studio powered by MiniMax Music 3 | ![stars](https://img.shields.io/github/stars/timoncool/MiniMax-Music3-Studio?style=flat-square&label=%E2%98%85&labelColor=0d1117&color=1f6feb) |
 | **[Bulka](https://github.com/timoncool/Bulka)** | Live-coding music in the browser — Strudel fork with a built-in AI agent | ![stars](https://img.shields.io/github/stars/timoncool/Bulka?style=flat-square&label=%E2%98%85&labelColor=0d1117&color=1f6feb) |
 | **[Foundation Music Lab](https://github.com/timoncool/Foundation-Music-Lab)** | Music generation + timeline editor | ![stars](https://img.shields.io/github/stars/timoncool/Foundation-Music-Lab?style=flat-square&label=%E2%98%85&labelColor=0d1117&color=1f6feb) |
@@ -83,8 +83,8 @@ approach: Everything local, everything free, zero cloud dependency
 | Project | Description | Stars |
 |---|---|---|
 | **[Prompt Warrior](https://github.com/timoncool/prompt-warrior)** | Gamified analytical portrait of your AI workflow | ![stars](https://img.shields.io/github/stars/timoncool/prompt-warrior?style=flat-square&label=%E2%98%85&labelColor=0d1117&color=1f6feb) |
-| **[dream-skill](https://github.com/timoncool/dream-skill)** | Memory consolidation for Claude Code — dream/wake passes, one-command rollback | ![stars](https://img.shields.io/github/stars/timoncool/dream-skill?style=flat-square&label=%E2%98%85&labelColor=0d1117&color=1f6feb) |
 | **[satori](https://github.com/timoncool/satori)** | Self-learning loop for Claude Code — corrections become skills | ![stars](https://img.shields.io/github/stars/timoncool/satori?style=flat-square&label=%E2%98%85&labelColor=0d1117&color=1f6feb) |
+| **[dream-skill](https://github.com/timoncool/dream-skill)** | Memory consolidation for Claude Code — dream/wake passes, one-command rollback | ![stars](https://img.shields.io/github/stars/timoncool/dream-skill?style=flat-square&label=%E2%98%85&labelColor=0d1117&color=1f6feb) |
 | **[Jarvis Codex Bot](https://github.com/timoncool/jarvis-codex-bot)** | Telegram assistant on Codex + OpenRouter — text, voice, images, files | ![stars](https://img.shields.io/github/stars/timoncool/jarvis-codex-bot?style=flat-square&label=%E2%98%85&labelColor=0d1117&color=1f6feb) |
 | **[Prompt Layer](https://github.com/timoncool/prompt-layer)** | Invisible prompt layer for Claude Code — Haiku cleans and sharpens every prompt | ![stars](https://img.shields.io/github/stars/timoncool/prompt-layer?style=flat-square&label=%E2%98%85&labelColor=0d1117&color=1f6feb) |
 
