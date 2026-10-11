@@ -78,7 +78,7 @@ approach: Everything local, everything free, zero cloud dependency
 </details>
 
 <details>
-<summary><h3>🧠 AI Agents & Claude Code · 6</h3></summary>
+<summary><h3>🧠 AI Agents & Claude Code · 7</h3></summary>
 
 | Project | Description | Stars |
 |---|---|---|
@@ -88,6 +88,7 @@ approach: Everything local, everything free, zero cloud dependency
 | **[Angry Switcher](https://github.com/timoncool/angry-switcher)** | Swear at Claude Code all you like — it reads the clean version: typos, layout, swearing and caps cleaned | ![stars](https://img.shields.io/github/stars/timoncool/angry-switcher?style=flat-square&label=%E2%98%85&labelColor=0d1117&color=1f6feb) |
 | **[Jarvis Codex Bot](https://github.com/timoncool/jarvis-codex-bot)** | Telegram assistant on Codex + OpenRouter — text, voice, images, files | ![stars](https://img.shields.io/github/stars/timoncool/jarvis-codex-bot?style=flat-square&label=%E2%98%85&labelColor=0d1117&color=1f6feb) |
 | **[givememod](https://github.com/timoncool/givememod)** | Say /givememod and Claude Code builds a mod for the task in front of you — plan bars, panes, guards | ![stars](https://img.shields.io/github/stars/timoncool/givememod?style=flat-square&label=%E2%98%85&labelColor=0d1117&color=1f6feb) |
+| **[slapbox](https://github.com/timoncool/slapbox)** | Spank Claude when it messes up — a stress-relief mod for Claude Code: 8 slappers, 9 butts, Claude gets the tally | ![stars](https://img.shields.io/github/stars/timoncool/slapbox?style=flat-square&label=%E2%98%85&labelColor=0d1117&color=1f6feb) |
 
 </details>
 
