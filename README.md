@@ -40,7 +40,7 @@ approach: Everything local, everything free, zero cloud dependency
 </details>
 
 <details open>
-<summary><h3>🗣️ Speech & Audio · 7</h3></summary>
+<summary><h3>🗣️ Speech & Audio · 8</h3></summary>
 
 | Project | Description | Stars |
 |---|---|---|
@@ -50,6 +50,7 @@ approach: Everything local, everything free, zero cloud dependency
 | **[Higgs Ultimate](https://github.com/timoncool/Higgs-Ultimate)** | Native desktop TTS & voice cloning — offline, batch mode | ![stars](https://img.shields.io/github/stars/timoncool/Higgs-Ultimate?style=flat-square&label=%E2%98%85&labelColor=0d1117&color=1f6feb) |
 | **[VibeVoice ASR](https://github.com/timoncool/VibeVoice_ASR_portable_ru)** | Portable speech recognition | ![stars](https://img.shields.io/github/stars/timoncool/VibeVoice_ASR_portable_ru?style=flat-square&label=%E2%98%85&labelColor=0d1117&color=1f6feb) |
 | **[LavaSR](https://github.com/timoncool/LavaSR_portable_ru)** | Portable audio quality enhancement | ![stars](https://img.shields.io/github/stars/timoncool/LavaSR_portable_ru?style=flat-square&label=%E2%98%85&labelColor=0d1117&color=1f6feb) |
+| **[Speech Studio](https://github.com/timoncool/speech-studio)** | Local voice studio — five TTS engines, voice cloning, audiobooks, speech recognition with speakers, voice chat with an AI agent | ![stars](https://img.shields.io/github/stars/timoncool/speech-studio?style=flat-square&label=%E2%98%85&labelColor=0d1117&color=1f6feb) |
 | **[DotsTTS Studio](https://github.com/timoncool/DotsTTS-Studio)** | dots.tts — codec-token-free TTS, 100+ languages, voice cloning | ![stars](https://img.shields.io/github/stars/timoncool/DotsTTS-Studio?style=flat-square&label=%E2%98%85&labelColor=0d1117&color=1f6feb) |
 
 </details>
@@ -83,12 +84,12 @@ approach: Everything local, everything free, zero cloud dependency
 | Project | Description | Stars |
 |---|---|---|
 | **[Prompt Warrior](https://github.com/timoncool/prompt-warrior)** | Gamified analytical portrait of your AI workflow | ![stars](https://img.shields.io/github/stars/timoncool/prompt-warrior?style=flat-square&label=%E2%98%85&labelColor=0d1117&color=1f6feb) |
+| **[givememod](https://github.com/timoncool/givememod)** | Say /givememod and Claude Code builds a mod for the task in front of you — plan bars, panes, guards | ![stars](https://img.shields.io/github/stars/timoncool/givememod?style=flat-square&label=%E2%98%85&labelColor=0d1117&color=1f6feb) |
 | **[satori](https://github.com/timoncool/satori)** | Self-learning loop for Claude Code — corrections become skills | ![stars](https://img.shields.io/github/stars/timoncool/satori?style=flat-square&label=%E2%98%85&labelColor=0d1117&color=1f6feb) |
 | **[dream-skill](https://github.com/timoncool/dream-skill)** | Memory consolidation for Claude Code — dream/wake passes, one-command rollback | ![stars](https://img.shields.io/github/stars/timoncool/dream-skill?style=flat-square&label=%E2%98%85&labelColor=0d1117&color=1f6feb) |
 | **[Angry Switcher](https://github.com/timoncool/angry-switcher)** | Swear at Claude Code all you like — it reads the clean version: typos, layout, swearing and caps cleaned | ![stars](https://img.shields.io/github/stars/timoncool/angry-switcher?style=flat-square&label=%E2%98%85&labelColor=0d1117&color=1f6feb) |
-| **[Jarvis Codex Bot](https://github.com/timoncool/jarvis-codex-bot)** | Telegram assistant on Codex + OpenRouter — text, voice, images, files | ![stars](https://img.shields.io/github/stars/timoncool/jarvis-codex-bot?style=flat-square&label=%E2%98%85&labelColor=0d1117&color=1f6feb) |
-| **[givememod](https://github.com/timoncool/givememod)** | Say /givememod and Claude Code builds a mod for the task in front of you — plan bars, panes, guards | ![stars](https://img.shields.io/github/stars/timoncool/givememod?style=flat-square&label=%E2%98%85&labelColor=0d1117&color=1f6feb) |
 | **[slapbox](https://github.com/timoncool/slapbox)** | Spank Claude when it messes up — a stress-relief mod for Claude Code: 8 slappers, 9 butts, Claude gets the tally | ![stars](https://img.shields.io/github/stars/timoncool/slapbox?style=flat-square&label=%E2%98%85&labelColor=0d1117&color=1f6feb) |
+| **[Jarvis Codex Bot](https://github.com/timoncool/jarvis-codex-bot)** | Telegram assistant on Codex + OpenRouter — text, voice, images, files | ![stars](https://img.shields.io/github/stars/timoncool/jarvis-codex-bot?style=flat-square&label=%E2%98%85&labelColor=0d1117&color=1f6feb) |
 
 </details>
 
