@@ -45,12 +45,12 @@ approach: Everything local, everything free, zero cloud dependency
 | Project | Description | Stars |
 |---|---|---|
 | **[Qwen3-TTS](https://github.com/timoncool/Qwen3-TTS_portable_rus)** | Portable text-to-speech with voice cloning | ![stars](https://img.shields.io/github/stars/timoncool/Qwen3-TTS_portable_rus?style=flat-square&label=%E2%98%85&labelColor=0d1117&color=1f6feb) |
+| **[Speech Studio](https://github.com/timoncool/speech-studio)** | Local voice studio — five TTS engines, voice cloning, audiobooks, speech recognition with speakers, voice chat with an AI agent | ![stars](https://img.shields.io/github/stars/timoncool/speech-studio?style=flat-square&label=%E2%98%85&labelColor=0d1117&color=1f6feb) |
 | **[HiggsAudio Studio](https://github.com/timoncool/HiggsAudio-Studio)** | Higgs Audio v3 TTS — expressive speech, voice cloning, AI text director, podcasts & audiobooks | ![stars](https://img.shields.io/github/stars/timoncool/HiggsAudio-Studio?style=flat-square&label=%E2%98%85&labelColor=0d1117&color=1f6feb) |
 | **[VoxCPM2 Portable](https://github.com/timoncool/VoxCPM2_portable)** | TTS + voice cloning with one-click LoRA training from video/audio | ![stars](https://img.shields.io/github/stars/timoncool/VoxCPM2_portable?style=flat-square&label=%E2%98%85&labelColor=0d1117&color=1f6feb) |
 | **[Higgs Ultimate](https://github.com/timoncool/Higgs-Ultimate)** | Native desktop TTS & voice cloning — offline, batch mode | ![stars](https://img.shields.io/github/stars/timoncool/Higgs-Ultimate?style=flat-square&label=%E2%98%85&labelColor=0d1117&color=1f6feb) |
 | **[VibeVoice ASR](https://github.com/timoncool/VibeVoice_ASR_portable_ru)** | Portable speech recognition | ![stars](https://img.shields.io/github/stars/timoncool/VibeVoice_ASR_portable_ru?style=flat-square&label=%E2%98%85&labelColor=0d1117&color=1f6feb) |
 | **[LavaSR](https://github.com/timoncool/LavaSR_portable_ru)** | Portable audio quality enhancement | ![stars](https://img.shields.io/github/stars/timoncool/LavaSR_portable_ru?style=flat-square&label=%E2%98%85&labelColor=0d1117&color=1f6feb) |
-| **[Speech Studio](https://github.com/timoncool/speech-studio)** | Local voice studio — five TTS engines, voice cloning, audiobooks, speech recognition with speakers, voice chat with an AI agent | ![stars](https://img.shields.io/github/stars/timoncool/speech-studio?style=flat-square&label=%E2%98%85&labelColor=0d1117&color=1f6feb) |
 | **[DotsTTS Studio](https://github.com/timoncool/DotsTTS-Studio)** | dots.tts — codec-token-free TTS, 100+ languages, voice cloning | ![stars](https://img.shields.io/github/stars/timoncool/DotsTTS-Studio?style=flat-square&label=%E2%98%85&labelColor=0d1117&color=1f6feb) |
 
 </details>
