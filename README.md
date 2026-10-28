@@ -7,7 +7,7 @@
 [![Telegram](https://img.shields.io/badge/Telegram-nerual__dreming-26A5E4?style=for-the-badge&logo=telegram&logoColor=white)](https://t.me/nerual_dreming)
 [![Website](https://img.shields.io/badge/neuro--cartel.com-000?style=for-the-badge&logo=google-chrome&logoColor=white)](https://neuro-cartel.com)
 [![YouTube](https://img.shields.io/badge/YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white)](https://www.youtube.com/@nerual_dreming)
-[![Sponsor](https://img.shields.io/badge/Sponsor-ea4aaa?style=for-the-badge&logo=githubsponsors&logoColor=white)](https://github.com/timoncool/ACE-Step-Studio/blob/master/DONATE.md)
+[![Sponsor](https://img.shields.io/badge/Sponsor-ea4aaa?style=for-the-badge&logo=githubsponsors&logoColor=white)](https://timoncool.github.io/YuE2-Studio/donate.html)
 
 </div>
 
@@ -149,7 +149,7 @@ approach: Everything local, everything free, zero cloud dependency
 
 I build open-source AI tools for everyone. Your support helps me keep creating =)
 
-[![Donate](https://img.shields.io/badge/All_donation_methods-ea4aaa?style=for-the-badge&logo=githubsponsors&logoColor=white)](https://github.com/timoncool/ACE-Step-Studio/blob/master/DONATE.md)
+[![Donate](https://img.shields.io/badge/All_donation_methods-ea4aaa?style=for-the-badge&logo=githubsponsors&logoColor=white)](https://timoncool.github.io/YuE2-Studio/donate.html)
 [![dalink.to](https://img.shields.io/badge/Card_%2F_PayPal-dalink.to-29ABE2?style=for-the-badge&logo=paypal&logoColor=white)](https://dalink.to/nerual_dreming)
 [![Boosty](https://img.shields.io/badge/Monthly-Boosty-F15F2C?style=for-the-badge)](https://boosty.to/neuro_art)
 
