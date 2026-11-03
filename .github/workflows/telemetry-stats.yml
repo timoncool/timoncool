@@ -1,0 +1,31 @@
+name: Open telemetry stats
+
+on:
+  schedule:
+    - cron: "0 6 * * *"
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - scripts/build-stats.mjs
+      - .github/workflows/telemetry-stats.yml
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Build stats.json, SVG cards and READMEs
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: node scripts/build-stats.mjs
+      - name: Commit and push
+        uses: EndBug/add-and-commit@v9
+        with:
+          add: "stats.json dist README.md README.*.md"
+          message: "Update open telemetry stats"
