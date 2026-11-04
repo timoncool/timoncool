@@ -187,7 +187,7 @@ function badgeIcon(type, cx, cy) {
 // A dark pill badge: blue icon + label, matching the cards. Width grows with the label.
 function badgeSvg(label, icon) {
   const h = 36, pad = 15, iconSlot = icon ? 26 : 0, cy = h / 2;
-  const tw = Math.round([...label].reduce((a, ch) => a + (ch === ' ' ? 4.2 : /[.,'·]/.test(ch) ? 3.6 : /[iljtI]/.test(ch) ? 4.2 : /[mwMW]/.test(ch) ? 11 : 7.7), 0));
+  const tw = Math.round([...label].reduce((a, ch) => a + (ch.codePointAt(0) > 0x2e00 ? 15 : ch === ' ' ? 4.2 : /[.,'·]/.test(ch) ? 3.6 : /[iljtI]/.test(ch) ? 4.2 : /[mwMW]/.test(ch) ? 11 : 7.7), 0));
   const W = pad + iconSlot + tw + pad;
   const tx = pad + iconSlot;
   return `<svg xmlns="http://www.w3.org/2000/svg" width="${W}" height="${h}" viewBox="0 0 ${W} ${h}" role="img" aria-label="${esc(label)}">
@@ -200,7 +200,6 @@ function badgeSvg(label, icon) {
 // The hero social row and the donate row, as pill badges.
 const HERO_BADGES = [
   { file: 'telegram', label: 'Telegram', icon: 'telegram', href: 'https://t.me/nerual_dreming' },
-  { file: 'website', label: 'neuro-cartel.com', icon: 'globe', href: 'https://neuro-cartel.com' },
   { file: 'youtube', label: 'YouTube', icon: 'youtube', href: 'https://www.youtube.com/@nerual_dreming' },
   { file: 'support', label: 'Support', icon: 'heart', href: 'https://timoncool.github.io/YuE2-Studio/donate.html' },
 ];
@@ -209,6 +208,13 @@ const DONATE_BADGES = [
   { file: 'card', label: 'Bank card — dalink.to', icon: 'card', href: 'https://dalink.to/nerual_dreming' },
   { file: 'boosty', label: 'Boosty', icon: 'spark', href: 'https://boosty.to/neuro_art' },
 ];
+// Translatable badge labels (proper nouns like Telegram, YouTube, Boosty stay the same).
+const BADGE_L10N = {
+  Support: { ru: 'Поддержать', zh: '支持', ja: '支援', ko: '후원', pt: 'Apoiar', es: 'Apoyar', fr: 'Soutenir' },
+  'All donation methods': { ru: 'Все способы доната', zh: '全部捐赠方式', ja: 'すべての支援方法', ko: '모든 후원 방법', pt: 'Formas de apoio', es: 'Formas de apoyo', fr: 'Moyens de don' },
+  'Bank card — dalink.to': { ru: 'Карта — dalink.to', zh: '银行卡 — dalink.to', ja: 'カード — dalink.to', ko: '카드 — dalink.to', pt: 'Cartão — dalink.to', es: 'Tarjeta — dalink.to', fr: 'Carte — dalink.to' },
+};
+const badgeLabel = (label, lang) => (lang !== 'en' && BADGE_L10N[label] && BADGE_L10N[label][lang]) || label;
 
 const DEVLABEL = { en: 'DEVELOPMENT', ru: 'РАЗРАБОТКА', zh: '开发', ja: '開発', ko: '개발', pt: 'DESENVOLVIMENTO', es: 'DESARROLLO', fr: 'DÉVELOPPEMENT' };
 
@@ -388,9 +394,10 @@ function tileSvg(p, lang) {
 </svg>`;
 }
 
-// Two clickable project cards per row, as inline images (no <table>, so GitHub draws no cell borders).
+// Two clickable project cards per row, as inline images at 48% width — responsive 2-up grid with no
+// <table> (so GitHub draws no cell borders); the SVG tiles scale crisply to whatever the column width is.
 function linkGrid(items, lang) {
-  const cell = (p) => `<a href="https://github.com/${LOGIN}/${p.repo}"><img src="dist/tile-${p.repo}-${lang}.svg" width="408" alt="${esc(p.name)}"></a>`;
+  const cell = (p) => `<a href="https://github.com/${LOGIN}/${p.repo}"><img src="dist/tile-${p.repo}-${lang}.svg" width="48%" alt="${esc(p.name)}"></a>`;
   const rows = [];
   for (let i = 0; i < items.length; i += 2) rows.push(cell(items[i]) + (items[i + 1] ? ' ' + cell(items[i + 1]) : ''));
   return rows.join('\n\n');
@@ -492,12 +499,25 @@ const NOTE = {
   fr: { usage: 'Anonyme · volontaire · quotidien', dev: 'API GitHub · quotidien' },
 };
 
-const HERO = `<a href="https://github.com/timoncool">
-  <img src="https://readme-typing-svg.demolab.com/?lines=Free+local+AI+apps+for+everyone;Music+%C2%B7+Speech+%C2%B7+Video;Portable.+One+click.+Local-first.;Co-Founder+of+ArtGeneration.me&font=Fira+Code&center=true&width=500&height=50&color=58a6ff&vCenter=true&pause=1000&size=20" alt="" />
-</a>`;
+// The animated hero lines, per language.
+const TYPING = {
+  en: ['Free local AI apps for everyone', 'Music · Speech · Video', 'Portable. One click. Local-first.', 'Co-Founder of ArtGeneration.me'],
+  ru: ['Бесплатные локальные AI-приложения', 'Музыка · Речь · Видео', 'Портативно. Один клик. Локально.', 'Сооснователь ArtGeneration.me'],
+  zh: ['人人可用的免费本地 AI 应用', '音乐 · 语音 · 视频', '便携 · 一键 · 本地优先', 'ArtGeneration.me 联合创始人'],
+  ja: ['誰でも使える無料ローカル AI アプリ', '音楽 · 音声 · 動画', 'ポータブル・ワンクリック・ローカル', 'ArtGeneration.me 共同創業者'],
+  ko: ['누구나 쓰는 무료 로컬 AI 앱', '음악 · 음성 · 영상', '포터블 · 원클릭 · 로컬 우선', 'ArtGeneration.me 공동 창업자'],
+  pt: ['Apps de IA locais e grátis para todos', 'Música · Voz · Vídeo', 'Portátil. Um clique. Local-first.', 'Cofundador da ArtGeneration.me'],
+  es: ['Apps de IA locales y gratis para todos', 'Música · Voz · Vídeo', 'Portátil. Un clic. Local-first.', 'Cofundador de ArtGeneration.me'],
+  fr: ['Applis IA locales et gratuites pour tous', 'Musique · Voix · Vidéo', 'Portable. Un clic. Local-first.', 'Co-fondateur d’ArtGeneration.me'],
+};
+function heroSvg(lang) {
+  const lines = (TYPING[lang] || TYPING.en).map((l) => encodeURIComponent(l)).join(';');
+  const url = `https://readme-typing-svg.demolab.com/?lines=${lines}&font=Fira+Code&center=true&width=520&height=50&color=58a6ff&vCenter=true&pause=1000&size=20`;
+  return `<a href="https://github.com/timoncool">\n  <img src="${url}" alt="" />\n</a>`;
+}
 
-// a row of linked pill badges
-const badgeRow = (badges) => badges.map((b) => `<a href="${b.href}"><img src="dist/badge-${b.file}.svg" height="34" alt="${esc(b.label)}"></a>`).join('\n');
+// a row of linked pill badges, localized per language
+const badgeRow = (badges, lang) => badges.map((b) => `<a href="${b.href}"><img src="dist/badge-${b.file}-${lang}.svg" height="34" alt="${esc(b.label)}"></a>`).join('\n');
 
 const TECH = `<details>
 <summary><h4>__TECH__</h4></summary>
@@ -522,9 +542,9 @@ function readme(s, lang) {
 
 ${switcher}
 
-${HERO}
+${heroSvg(lang)}
 
-${badgeRow(HERO_BADGES)}
+${badgeRow(HERO_BADGES, lang)}
 
 <a href="${STATS_PAGE}"><img src="dist/usage-${lang}.svg" alt="${esc(t.tel_h)}" width="840"></a>
 
@@ -550,7 +570,7 @@ ${more}
 
 ${SUP[lang] || SUP.en}
 
-${badgeRow(DONATE_BADGES)}
+${badgeRow(DONATE_BADGES, lang)}
 
 <sub>
 
@@ -583,7 +603,7 @@ async function main() {
   await mkdir(join(ROOT, 'dist'), { recursive: true });
   await writeFile(join(ROOT, 'stats.json'), JSON.stringify(stats, null, 2) + '\n');
   for (const c of CATS) await writeFile(join(ROOT, 'dist', `cat-${c.icon}.svg`), catIcon(c.icon));
-  for (const b of [...HERO_BADGES, ...DONATE_BADGES]) await writeFile(join(ROOT, 'dist', `badge-${b.file}.svg`), badgeSvg(b.label, b.icon));
+  for (const lang of LANGS) for (const b of [...HERO_BADGES, ...DONATE_BADGES]) await writeFile(join(ROOT, 'dist', `badge-${b.file}-${lang}.svg`), badgeSvg(badgeLabel(b.label, lang), b.icon));
   // one tile per project per language (localized description), so each card is its own clickable link
   const catItems = CATS.flatMap((c) => c.items.map((it) => ({ ...it, stars: starsOf(it.repo), downloads: dlOf(it.repo) })));
   const allTiles = [...featured, ...catItems];

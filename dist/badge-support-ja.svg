@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="86" height="36" viewBox="0 0 86 36" role="img" aria-label="支援">
+  <rect x="1" y="1" width="84" height="34" rx="9" fill="#161b22" stroke="#30363d"/>
+  <path d="M25,24.5 C16,17 19,10 22.5,13 C24,14.2 25,15.5 25,15.5 C25,15.5 26,14.2 27.5,13 C31,10 34,17 25,24.5 Z" fill="#58a6ff" stroke="none"/>
+  <text x="41" y="23" fill="#e6edf3" font-size="14" font-weight="600" font-family="'Segoe UI',system-ui,-apple-system,sans-serif">支援</text>
+</svg>

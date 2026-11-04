@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="117" height="36" viewBox="0 0 117 36" role="img" aria-label="Telegram">
+  <rect x="1" y="1" width="115" height="34" rx="9" fill="#161b22" stroke="#30363d"/>
+  <path d="M34,11 L16,18 L22,20.5 L24,25 L26.5,21 L30,24 Z" fill="none" stroke="#58a6ff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="41" y="23" fill="#e6edf3" font-size="14" font-weight="600" font-family="'Segoe UI',system-ui,-apple-system,sans-serif">Telegram</text>
+</svg>
