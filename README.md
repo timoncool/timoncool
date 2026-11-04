@@ -78,6 +78,4 @@ I build free, open-source, local-first AI apps for everyone. Your support keeps 
 
 </div>
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0d1117&height=80&section=footer" width="100%" alt="" />
-
 <div align="center"><sub>Updated: 2026-11-04 · Usage numbers update daily from anonymous, opt-in stats.</sub></div>

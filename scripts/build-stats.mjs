@@ -580,8 +580,6 @@ ${badgeRow(DONATE_BADGES, lang)}
 
 </div>
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0d1117&height=80&section=footer" width="100%" alt="" />
-
 <div align="center"><sub>${t.updated}: ${updated} · ${t.foot}</sub></div>
 `;
 }

@@ -78,6 +78,4 @@ Crio apps de IA gratuitos, open-source e local-first para todos. Seu apoio os ma
 
 </div>
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0d1117&height=80&section=footer" width="100%" alt="" />
-
 <div align="center"><sub>Atualizado: 2026-11-04 · Os números de uso são atualizados diariamente a partir de estatísticas anônimas.</sub></div>

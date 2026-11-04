@@ -78,6 +78,4 @@ Creo apps de IA gratuitas, open-source y local-first para todos. Tu apoyo las ma
 
 </div>
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0d1117&height=80&section=footer" width="100%" alt="" />
-
 <div align="center"><sub>Actualizado: 2026-11-04 · Los números de uso se actualizan a diario desde estadísticas anónimas.</sub></div>

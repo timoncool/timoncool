@@ -78,6 +78,4 @@
 
 </div>
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0d1117&height=80&section=footer" width="100%" alt="" />
-
 <div align="center"><sub>업데이트: 2026-11-04 · 사용 수치는 익명 통계에서 매일 갱신됩니다.</sub></div>
