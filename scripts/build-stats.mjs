@@ -10,7 +10,7 @@ import { dirname, join } from 'node:path';
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const HUB_URL = process.env.HUB_URL || 'https://studio-hub.timoncool.workers.dev/v1/public';
 const LOGIN = 'timoncool';
-// a studio stats page to link the telemetry to (any studio site serves the same stats.json)
+// a studio stats page to link the usage numbers to (any studio site serves the same stats.json)
 const STATS_PAGE = 'https://timoncool.github.io/YuE2-Studio/stats.html';
 
 // The featured studios, in order, with the hub id that carries their usage. Stars/releases are merged from GitHub.
@@ -154,7 +154,7 @@ function cardSvg(cells, eyebrow, titleRight) {
 
 const DEVLABEL = { en: 'DEVELOPMENT', ru: 'РАЗРАБОТКА', zh: '开发', ja: '開発', ko: '개발', pt: 'DESENVOLVIMENTO', es: 'DESARROLLO', fr: 'DÉVELOPPEMENT' };
 
-function telemetrySvg(s, lang) {
+function usageSvg(s, lang) {
   const t = T[lang] || T.en;
   return cardSvg([
     { n: fmt(s.totals.people), l: t.people },
@@ -390,7 +390,7 @@ ${switcher}
 
 ${HERO}
 
-<a href="${STATS_PAGE}"><img src="dist/telemetry-${lang}.svg" alt="${esc(t.tel_h)}" width="840"></a>
+<a href="${STATS_PAGE}"><img src="dist/usage-${lang}.svg" alt="${esc(t.tel_h)}" width="840"></a>
 
 **[${t.tel_see}](${STATS_PAGE})**
 
@@ -462,7 +462,7 @@ async function main() {
     await writeFile(join(ROOT, 'dist', `tile-${it.repo}.svg`), tileSvg({ ...it, stars: starsOf(it.repo), downloads: dlOf(it.repo) }));
   }
   for (const lang of LANGS) {
-    await writeFile(join(ROOT, 'dist', `telemetry-${lang}.svg`), telemetrySvg(stats, lang));
+    await writeFile(join(ROOT, 'dist', `usage-${lang}.svg`), usageSvg(stats, lang));
     await writeFile(join(ROOT, 'dist', `dev-${lang}.svg`), devSvg(stats, lang));
     await writeFile(join(ROOT, lang === 'en' ? 'README.md' : `README.${lang}.md`), readme(stats, lang));
   }

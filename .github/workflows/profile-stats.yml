@@ -8,7 +8,7 @@ on:
     branches: [main]
     paths:
       - scripts/build-stats.mjs
-      - .github/workflows/telemetry-stats.yml
+      - .github/workflows/profile-stats.yml
 
 # One light run at a time: 1 GraphQL + ~25 REST + 1 hub fetch, no npm install, no build artifacts.
 concurrency:

@@ -11,7 +11,7 @@
 [![YouTube](https://img.shields.io/badge/YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white)](https://www.youtube.com/@nerual_dreming)
 [![Sponsor](https://img.shields.io/badge/Sponsor-ea4aaa?style=for-the-badge&logo=githubsponsors&logoColor=white)](https://timoncool.github.io/YuE2-Studio/donate.html)
 
-<a href="https://timoncool.github.io/YuE2-Studio/stats.html"><img src="dist/telemetry-zh.svg" alt="谁在使用我的应用" width="840"></a>
+<a href="https://timoncool.github.io/YuE2-Studio/stats.html"><img src="dist/usage-zh.svg" alt="谁在使用我的应用" width="840"></a>
 
 **[查看实时使用统计 →](https://timoncool.github.io/YuE2-Studio/stats.html)**
 
