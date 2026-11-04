@@ -137,22 +137,22 @@ const F = "font-family=\"'Segoe UI',system-ui,-apple-system,sans-serif\"";
 // A wide stat banner: 4 big numbers with labels, an accent stripe and an eyebrow. Native SVG elements only —
 // GitHub strips <style>, CSS, @keyframes, foreignObject and JS from SVGs loaded through <img>, but renders text/rect/line.
 function cardSvg(cells, eyebrow, titleRight) {
-  const W = 840, H = 140;
+  const W = 840, H = 112;
   const cw = (W - 48) / cells.length;
   const items = cells.map((c, i) => {
     const x = 24 + cw * i + cw / 2;
     const numW = numWidth(c.n, 19);
     const gx = x - (24 + numW) / 2; // centre the icon+number group
-    return (c.ic ? kpiIcon(c.ic, gx + 9, 86) : '') +
-      `<text x="${c.ic ? gx + 26 : x}" y="96" ${c.ic ? '' : 'text-anchor="middle" '}fill="${C.ink}" font-size="34" font-weight="800" ${F}>${esc(c.n)}</text>` +
-      `<text x="${x}" y="118" text-anchor="middle" fill="${C.mut}" font-size="14" ${F}>${esc(c.l)}</text>`;
+    return (c.ic ? kpiIcon(c.ic, gx + 9, 68) : '') +
+      `<text x="${c.ic ? gx + 26 : x}" y="78" ${c.ic ? '' : 'text-anchor="middle" '}fill="${C.ink}" font-size="34" font-weight="800" ${F}>${esc(c.n)}</text>` +
+      `<text x="${x}" y="99" text-anchor="middle" fill="${C.mut}" font-size="14" ${F}>${esc(c.l)}</text>`;
   }).join('');
-  const seps = cells.slice(1).map((_, i) => `<line x1="${24 + cw * (i + 1)}" y1="48" x2="${24 + cw * (i + 1)}" y2="116" stroke="${C.line}"/>`).join('');
+  const seps = cells.slice(1).map((_, i) => `<line x1="${24 + cw * (i + 1)}" y1="44" x2="${24 + cw * (i + 1)}" y2="96" stroke="${C.line}"/>`).join('');
   return `<svg xmlns="http://www.w3.org/2000/svg" width="${W}" height="${H}" viewBox="0 0 ${W} ${H}" role="img" aria-label="${esc(titleRight)}">
   <rect x="1" y="1" width="${W - 2}" height="${H - 2}" rx="16" fill="${C.card}" stroke="${C.line}"/>
   <rect x="1" y="1" width="6" height="${H - 2}" rx="3" fill="${C.acc}"/>
-  <text x="24" y="32" fill="${C.acc2}" font-size="13" font-weight="700" letter-spacing="2" ${F}>${esc(eyebrow)}</text>
-  <text x="${W - 24}" y="32" text-anchor="end" fill="${C.mut}" font-size="13" ${F}>${esc(titleRight)}</text>
+  <text x="24" y="28" fill="${C.acc2}" font-size="13" font-weight="700" letter-spacing="2" ${F}>${esc(eyebrow)}</text>
+  <text x="${W - 24}" y="28" text-anchor="end" fill="${C.mut}" font-size="13" ${F}>${esc(titleRight)}</text>
   ${seps}${items}
 </svg>`;
 }
@@ -235,7 +235,7 @@ function monthTicks(activity, x0, w, y) {
 function devSvg(s, lang) {
   const t = T[lang] || T.en;
   const d = s.dev || {};
-  const W = 840, H = 300;
+  const W = 840, H = 264;
   const cells = [
     { n: fmt(d.commits), l: t.commits, ic: 'commit' },
     { n: fmt(d.issues_closed), l: t.issues, ic: 'issue' },
@@ -246,19 +246,19 @@ function devSvg(s, lang) {
   const stats = cells.map((c, i) => {
     const x = 24 + cw * i + cw / 2;
     const gx = x - (22 + numWidth(c.n, 17)) / 2; // centre the icon+number group
-    return kpiIcon(c.ic, gx + 8, 86) +
-      `<text x="${gx + 24}" y="96" fill="${C.ink}" font-size="30" font-weight="800" ${F}>${esc(c.n)}</text>` +
-      `<text x="${x}" y="116" text-anchor="middle" fill="${C.mut}" font-size="13" ${F}>${esc(c.l)}</text>`;
+    return kpiIcon(c.ic, gx + 8, 62) +
+      `<text x="${gx + 24}" y="72" fill="${C.ink}" font-size="30" font-weight="800" ${F}>${esc(c.n)}</text>` +
+      `<text x="${x}" y="92" text-anchor="middle" fill="${C.mut}" font-size="13" ${F}>${esc(c.l)}</text>`;
   }).join('');
-  const seps = cells.slice(1).map((_, i) => `<line x1="${24 + cw * (i + 1)}" y1="48" x2="${24 + cw * (i + 1)}" y2="120" stroke="${C.line}"/>`).join('');
+  const seps = cells.slice(1).map((_, i) => `<line x1="${24 + cw * (i + 1)}" y1="44" x2="${24 + cw * (i + 1)}" y2="94" stroke="${C.line}"/>`).join('');
   const series = (d.activity || []).map((p) => p.c);
-  const graph = areaGraph(series, 24, 150, W - 48, 118, 'devg');
-  const ticks = monthTicks(d.activity || [], 24, W - 48, 290);
+  const graph = areaGraph(series, 24, 108, W - 48, 128, 'devg');
+  const ticks = monthTicks(d.activity || [], 24, W - 48, 254);
   return `<svg xmlns="http://www.w3.org/2000/svg" width="${W}" height="${H}" viewBox="0 0 ${W} ${H}" role="img" aria-label="${esc(t.dev_h)}">
   <rect x="1" y="1" width="${W - 2}" height="${H - 2}" rx="16" fill="${C.card}" stroke="${C.line}"/>
   <rect x="1" y="1" width="6" height="${H - 2}" rx="3" fill="${C.acc}"/>
-  <text x="24" y="34" fill="${C.acc2}" font-size="13" font-weight="700" letter-spacing="2" ${F}>${esc(DEVLABEL[lang] || DEVLABEL.en)}</text>
-  <text x="${W - 24}" y="34" text-anchor="end" fill="${C.mut}" font-size="13" ${F}>${esc(t.dev_sub)}</text>
+  <text x="24" y="28" fill="${C.acc2}" font-size="13" font-weight="700" letter-spacing="2" ${F}>${esc(DEVLABEL[lang] || DEVLABEL.en)}</text>
+  <text x="${W - 24}" y="28" text-anchor="end" fill="${C.mut}" font-size="13" ${F}>${esc(t.dev_sub)}</text>
   ${seps}${stats}${graph}${ticks}
 </svg>`;
 }
