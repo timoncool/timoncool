@@ -126,6 +126,8 @@ const k = (n) => (n >= 1000 ? Math.floor(n / 100) / 10 + 'k' : String(n));
 const esc = (s) => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
 const realLen = (a) => (a || []).filter((x) => x.k !== 'other').length;
 const hasOther = (a) => (a || []).some((x) => x.k === 'other');
+// rough pixel width of a formatted number at digit-width dw (thin separators count less)
+const numWidth = (s, dw) => [...String(s)].reduce((a, ch) => a + (ch === ',' || ch === '.' ? dw * 0.42 : dw), 0);
 
 // ---- SVG cards (dark, read well on both GitHub themes) ----------------------------------------
 const C = { bg: '#0d1117', card: '#161b22', line: '#30363d', ink: '#e6edf3', mut: '#8b949e', acc: '#1f6feb', acc2: '#58a6ff' };
@@ -135,21 +137,35 @@ const F = "font-family=\"'Segoe UI',system-ui,-apple-system,sans-serif\"";
 // A wide stat banner: 4 big numbers with labels, an accent stripe and an eyebrow. Native SVG elements only —
 // GitHub strips <style>, CSS, @keyframes, foreignObject and JS from SVGs loaded through <img>, but renders text/rect/line.
 function cardSvg(cells, eyebrow, titleRight) {
-  const W = 840, H = 150;
+  const W = 840, H = 140;
   const cw = (W - 48) / cells.length;
   const items = cells.map((c, i) => {
     const x = 24 + cw * i + cw / 2;
-    return `<text x="${x}" y="98" text-anchor="middle" fill="${C.ink}" font-size="38" font-weight="800" ${F}>${esc(c.n)}</text>` +
-      `<text x="${x}" y="124" text-anchor="middle" fill="${C.mut}" font-size="15" ${F}>${esc(c.l)}</text>`;
+    const numW = numWidth(c.n, 19);
+    const gx = x - (24 + numW) / 2; // centre the icon+number group
+    return (c.ic ? kpiIcon(c.ic, gx + 9, 86) : '') +
+      `<text x="${c.ic ? gx + 26 : x}" y="96" ${c.ic ? '' : 'text-anchor="middle" '}fill="${C.ink}" font-size="34" font-weight="800" ${F}>${esc(c.n)}</text>` +
+      `<text x="${x}" y="118" text-anchor="middle" fill="${C.mut}" font-size="14" ${F}>${esc(c.l)}</text>`;
   }).join('');
-  const seps = cells.slice(1).map((_, i) => `<line x1="${24 + cw * (i + 1)}" y1="60" x2="${24 + cw * (i + 1)}" y2="118" stroke="${C.line}"/>`).join('');
+  const seps = cells.slice(1).map((_, i) => `<line x1="${24 + cw * (i + 1)}" y1="48" x2="${24 + cw * (i + 1)}" y2="116" stroke="${C.line}"/>`).join('');
   return `<svg xmlns="http://www.w3.org/2000/svg" width="${W}" height="${H}" viewBox="0 0 ${W} ${H}" role="img" aria-label="${esc(titleRight)}">
   <rect x="1" y="1" width="${W - 2}" height="${H - 2}" rx="16" fill="${C.card}" stroke="${C.line}"/>
   <rect x="1" y="1" width="6" height="${H - 2}" rx="3" fill="${C.acc}"/>
-  <text x="24" y="34" fill="${C.acc2}" font-size="13" font-weight="700" letter-spacing="2" ${F}>${esc(eyebrow)}</text>
-  <text x="${W - 24}" y="34" text-anchor="end" fill="${C.mut}" font-size="13" ${F}>${esc(titleRight)}</text>
+  <text x="24" y="32" fill="${C.acc2}" font-size="13" font-weight="700" letter-spacing="2" ${F}>${esc(eyebrow)}</text>
+  <text x="${W - 24}" y="32" text-anchor="end" fill="${C.mut}" font-size="13" ${F}>${esc(titleRight)}</text>
   ${seps}${items}
 </svg>`;
+}
+
+// Category icons for the "More projects" headers (line icons, same blue as everything else).
+function catIcon(type) {
+  const paths = {
+    video: '<path d="M22 8l-6 4 6 4V8Z"/><rect x="2" y="6" width="14" height="12" rx="2.5"/>',
+    mcp: '<path d="M9 2v6M15 2v6M7 8h10v3a5 5 0 0 1-10 0V8ZM12 16v6"/>',
+    agents: '<path d="M12 8V4H8"/><rect x="4" y="8" width="16" height="12" rx="2.5"/><path d="M2 14h2M20 14h2M15 13v2M9 13v2"/>',
+    tools: '<path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>',
+  };
+  return `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="${C.acc2}" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">${paths[type] || ''}</svg>`;
 }
 
 const DEVLABEL = { en: 'DEVELOPMENT', ru: 'РАЗРАБОТКА', zh: '开发', ja: '開発', ko: '개발', pt: 'DESENVOLVIMENTO', es: 'DESARROLLO', fr: 'DÉVELOPPEMENT' };
@@ -157,10 +173,10 @@ const DEVLABEL = { en: 'DEVELOPMENT', ru: 'РАЗРАБОТКА', zh: '开发', 
 function usageSvg(s, lang) {
   const t = T[lang] || T.en;
   return cardSvg([
-    { n: fmt(s.totals.people), l: t.people },
-    { n: fmt(s.totals.installs), l: t.installs },
-    { n: fmt(realLen(s.countries)) + (hasOther(s.countries) ? '+' : ''), l: t.countries },
-    { n: fmt(realLen(s.languages)) + (hasOther(s.languages) ? '+' : ''), l: t.languages },
+    { n: fmt(s.totals.people), l: t.people, ic: 'user' },
+    { n: fmt(s.totals.installs), l: t.installs, ic: 'dl' },
+    { n: fmt(realLen(s.countries)) + (hasOther(s.countries) ? '+' : ''), l: t.countries, ic: 'globe' },
+    { n: fmt(realLen(s.languages)) + (hasOther(s.languages) ? '+' : ''), l: t.languages, ic: 'lang' },
   ], t.eyebrow, t.tel_h);
 }
 
@@ -221,18 +237,20 @@ function devSvg(s, lang) {
   const d = s.dev || {};
   const W = 840, H = 300;
   const cells = [
-    { n: fmt(d.commits), l: t.commits },
-    { n: fmt(d.issues_closed), l: t.issues },
-    { n: fmt(d.releases), l: t.releases },
-    { n: fmt(d.pulls), l: t.pulls },
+    { n: fmt(d.commits), l: t.commits, ic: 'commit' },
+    { n: fmt(d.issues_closed), l: t.issues, ic: 'issue' },
+    { n: fmt(d.releases), l: t.releases, ic: 'tag' },
+    { n: fmt(d.pulls), l: t.pulls, ic: 'pr' },
   ];
   const cw = (W - 48) / cells.length;
   const stats = cells.map((c, i) => {
     const x = 24 + cw * i + cw / 2;
-    return `<text x="${x}" y="96" text-anchor="middle" fill="${C.ink}" font-size="34" font-weight="800" ${F}>${esc(c.n)}</text>` +
-      `<text x="${x}" y="118" text-anchor="middle" fill="${C.mut}" font-size="13" ${F}>${esc(c.l)}</text>`;
+    const gx = x - (22 + numWidth(c.n, 17)) / 2; // centre the icon+number group
+    return kpiIcon(c.ic, gx + 8, 86) +
+      `<text x="${gx + 24}" y="96" fill="${C.ink}" font-size="30" font-weight="800" ${F}>${esc(c.n)}</text>` +
+      `<text x="${x}" y="116" text-anchor="middle" fill="${C.mut}" font-size="13" ${F}>${esc(c.l)}</text>`;
   }).join('');
-  const seps = cells.slice(1).map((_, i) => `<line x1="${24 + cw * (i + 1)}" y1="60" x2="${24 + cw * (i + 1)}" y2="112" stroke="${C.line}"/>`).join('');
+  const seps = cells.slice(1).map((_, i) => `<line x1="${24 + cw * (i + 1)}" y1="48" x2="${24 + cw * (i + 1)}" y2="120" stroke="${C.line}"/>`).join('');
   const series = (d.activity || []).map((p) => p.c);
   const graph = areaGraph(series, 24, 150, W - 48, 118, 'devg');
   const ticks = monthTicks(d.activity || [], 24, W - 48, 290);
@@ -259,49 +277,93 @@ function wrap(text, max, lines) {
   return res;
 }
 
-// One project card as a standalone SVG (408x108): name, a wrapped 1-sentence description, and a metrics line.
-// Each card is its own file so the README can wrap it in a real link — a single big SVG wouldn't be clickable per tile.
-function tileSvg(p) {
-  const tw = 408, th = 108;
-  const lines = wrap(p.desc, 52, 2);
-  const dl = lines.map((ln, j) => `<text x="22" y="${54 + j * 19}" fill="${C.mut}" font-size="13" ${F}>${esc(ln)}</text>`).join('');
-  const meta = [
-    p.stars != null ? `★ ${k(p.stars)}` : null,
-    p.people ? `${k(p.people)} users` : null,
-    p.downloads ? `${k(p.downloads)} downloads` : null,
-  ].filter(Boolean).join('   ·   ');
-  return `<svg xmlns="http://www.w3.org/2000/svg" width="${tw}" height="${th}" viewBox="0 0 ${tw} ${th}" role="img" aria-label="${esc(p.name)}">
-  <rect x="1" y="1" width="${tw - 2}" height="${th - 2}" rx="14" fill="${C.card}" stroke="${C.line}"/>
-  <rect x="1" y="1" width="4" height="${th - 2}" rx="2" fill="${C.acc}"/>
-  <text x="22" y="31" fill="${C.ink}" font-size="17" font-weight="700" ${F}>${esc(p.name)}</text>
+// Small line icons for the metrics, drawn at a center point (native SVG so they render on GitHub).
+function statIcon(type, cx, cy) {
+  if (type === 'star') return `<text x="${cx}" y="${cy + 6}" text-anchor="middle" fill="${C.acc2}" font-size="17" ${F}>★</text>`;
+  if (type === 'user') return `<g fill="none" stroke="${C.acc2}" stroke-width="1.7"><circle cx="${cx}" cy="${cy - 3}" r="3.3"/><path d="M${cx - 6},${cy + 7} a6,5.5 0 0 1 12,0"/></g>`;
+  return `<g fill="none" stroke="${C.acc2}" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M${cx},${cy - 7} L${cx},${cy + 3}"/><path d="M${cx - 4},${cy - 1} L${cx},${cy + 3} L${cx + 4},${cy - 1}"/><path d="M${cx - 6},${cy + 7} L${cx + 6},${cy + 7}"/></g>`;
+}
+
+// Icons for the big KPI cards (usage banner and the work card), drawn centered at (cx, cy), ~16px.
+function kpiIcon(type, cx, cy) {
+  const s = `fill="none" stroke="${C.acc2}" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"`;
+  const d = C.acc2;
+  if (type === 'user') return `<g ${s}><circle cx="${cx}" cy="${cy - 3}" r="3.6"/><path d="M${cx - 7},${cy + 8} a7,6.5 0 0 1 14,0"/></g>`;
+  if (type === 'dl') return `<g ${s}><path d="M${cx},${cy - 8} L${cx},${cy + 3}"/><path d="M${cx - 4.5},${cy - 1.5} L${cx},${cy + 3} L${cx + 4.5},${cy - 1.5}"/><path d="M${cx - 7},${cy + 8} L${cx + 7},${cy + 8}"/></g>`;
+  if (type === 'globe') return `<g ${s}><circle cx="${cx}" cy="${cy}" r="8"/><ellipse cx="${cx}" cy="${cy}" rx="3.4" ry="8"/><path d="M${cx - 8},${cy} L${cx + 8},${cy}"/></g>`;
+  if (type === 'lang') return `<g ${s}><path d="M${cx - 8},${cy - 6} h16 v9 h-10 l-4,4 v-4 h-2 z"/></g>`;
+  if (type === 'commit') return `<g ${s}><circle cx="${cx}" cy="${cy}" r="3.8"/><path d="M${cx - 8},${cy} h4.2 M${cx + 3.8},${cy} h4.2"/></g>`;
+  if (type === 'issue') return `<g ${s}><circle cx="${cx}" cy="${cy}" r="7.2"/><circle cx="${cx}" cy="${cy}" r="1.7" fill="${d}" stroke="none"/></g>`;
+  if (type === 'tag') return `<g ${s}><path d="M${cx - 1},${cy - 8} L${cx + 8},${cy - 8} L${cx + 8},${cy + 1} L${cx - 1},${cy + 10} L${cx - 10},${cy + 1} Z"/><circle cx="${cx + 3.8}" cy="${cy - 3.8}" r="1.5" fill="${d}" stroke="none"/></g>`;
+  if (type === 'pr') return `<g ${s}><circle cx="${cx - 5.5}" cy="${cy - 5.5}" r="2.4"/><circle cx="${cx - 5.5}" cy="${cy + 5.5}" r="2.4"/><circle cx="${cx + 5.5}" cy="${cy + 5.5}" r="2.4"/><path d="M${cx - 5.5},${cy - 3.1} v6.2 M${cx - 3.1},${cy + 5.5} h6.2"/></g>`;
+  return '';
+}
+
+// Character wrap for CJK text (no spaces to break on).
+function wrapCjk(text, max, lines) {
+  const out = [];
+  let s = String(text);
+  for (let i = 0; i < lines && s; i++) {
+    if (s.length <= max || i === lines - 1) { out.push(i === lines - 1 && s.length > max ? s.slice(0, max - 1) + '…' : s); break; }
+    out.push(s.slice(0, max));
+    s = s.slice(max);
+  }
+  return out;
+}
+
+// One project card (408, two per row) in the given language: name + localized description on the left,
+// the metrics as icon+number rows on the right. Each card is its own file so the README can link it.
+function tileSvg(p, lang) {
+  const W = 408, H = 112;
+  const desc = (lang !== 'en' && DESC[p.repo] && DESC[p.repo][lang]) || p.desc || '';
+  const cjk = lang === 'zh' || lang === 'ja' || lang === 'ko';
+  const lines = cjk ? wrapCjk(desc, 20, 3) : wrap(desc, 42, 3);
+  // vertically centre the name + description block
+  const blockH = 22 + lines.length * 17;
+  const ny = Math.round((H - blockH) / 2) + 14;
+  const dl = lines.map((ln, j) => `<text x="20" y="${ny + 23 + j * 17}" fill="${C.mut}" font-size="12.5" ${F}>${esc(ln)}</text>`).join('');
+  const metrics = [
+    p.stars != null ? { ic: 'star', n: p.stars } : null,
+    p.people ? { ic: 'user', n: p.people } : null,
+    p.downloads ? { ic: 'dl', n: p.downloads } : null,
+  ].filter(Boolean);
+  // icons share one column (x=306); numbers start at one column (x=328) — both aligned
+  const rowH = 26, mTop = Math.round((H - metrics.length * rowH) / 2);
+  const rows = metrics.map((m, i) => {
+    const by = mTop + rowH * i + 17;
+    return statIcon(m.ic, 306, by - 5) + `<text x="328" y="${by}" fill="${C.ink}" font-size="16" font-weight="700" ${F}>${esc(k(m.n))}</text>`;
+  }).join('');
+  return `<svg xmlns="http://www.w3.org/2000/svg" width="${W}" height="${H}" viewBox="0 0 ${W} ${H}" role="img" aria-label="${esc(p.name)}">
+  <rect x="1" y="1" width="${W - 2}" height="${H - 2}" rx="14" fill="${C.card}" stroke="${C.line}"/>
+  <rect x="1" y="1" width="4" height="${H - 2}" rx="2" fill="${C.acc}"/>
+  <text x="20" y="${ny}" fill="${C.ink}" font-size="16.5" font-weight="700" ${F}>${esc(p.name)}</text>
   ${dl}
-  <text x="22" y="${th - 16}" fill="${C.acc2}" font-size="12.5" font-weight="700" ${F}>${esc(meta)}</text>
+  <line x1="288" y1="16" x2="288" y2="${H - 16}" stroke="${C.line}"/>
+  ${rows}
 </svg>`;
 }
 
-// A 2-column table of clickable project cards: each cell links its tile image to the repo.
-function linkGrid(items) {
-  const cell = (p) => `<td width="416" valign="top"><a href="https://github.com/${LOGIN}/${p.repo}"><img src="dist/tile-${p.repo}.svg" width="408" alt="${esc(p.name)}"></a></td>`;
+// A 2-column table of clickable project cards for a language: each cell links its tile image to the repo.
+function linkGrid(items, lang) {
+  const cell = (p) => `<td width="416" valign="top"><a href="https://github.com/${LOGIN}/${p.repo}"><img src="dist/tile-${p.repo}-${lang}.svg" width="408" alt="${esc(p.name)}"></a></td>`;
   let rows = '';
-  for (let i = 0; i < items.length; i += 2) {
-    rows += `  <tr>\n    ${cell(items[i])}\n    ${items[i + 1] ? cell(items[i + 1]) : '<td></td>'}\n  </tr>\n`;
-  }
+  for (let i = 0; i < items.length; i += 2) rows += `  <tr>\n    ${cell(items[i])}\n    ${items[i + 1] ? cell(items[i + 1]) : '<td></td>'}\n  </tr>\n`;
   return `<table>\n${rows}</table>`;
 }
 
 // The rest of the catalog, grouped. Stars are merged from the GitHub API in main(); descriptions are one sentence each.
 const CATS = [
-  { title: '🎬 Video & Vision', items: [
+  { title: 'Video & Vision', icon: 'video', items: [
     { repo: 'videosos', name: 'VideoSOS', desc: 'AI video production in the browser — 100+ models, lip sync and image-to-video.' },
     { repo: 'SuperCaption_Qwen3-VL', name: 'SuperCaption Qwen3-VL', desc: 'Image and video captioning and tagging with Qwen3-VL and 50+ ready templates.' },
   ] },
-  { title: '🔌 MCP Servers', items: [
+  { title: 'MCP Servers', icon: 'mcp', items: [
     { repo: 'telegram-api-mcp', name: 'telegram-api-mcp', desc: 'The whole Telegram Bot API as an MCP server — all 185 methods in one place.' },
     { repo: 'civitai-mcp-ultimate', name: 'civitai-mcp-ultimate', desc: 'The Civitai API as an MCP server: models, images and trends for your agent.' },
     { repo: 'trail-spec', name: 'trail-spec', desc: 'TRAIL — a cross-MCP protocol for tracking where generated content came from.' },
     { repo: 'hota-mcp', name: 'HotA MCP', desc: 'An AI agent that plays Heroes III: Horn of the Abyss like a real human player.' },
   ] },
-  { title: '🧠 AI Agents & Claude Code', items: [
+  { title: 'AI Agents & Claude Code', icon: 'agents', items: [
     { repo: 'givememod', name: 'givememod', desc: 'Say /givememod and Claude Code builds a mod for the task in front of you.' },
     { repo: 'prompt-warrior', name: 'Prompt Warrior', desc: 'A gamified, analytical portrait of how you actually work with AI.' },
     { repo: 'satori', name: 'satori', desc: 'A self-learning loop for Claude Code — your corrections become reusable skills.' },
@@ -310,7 +372,7 @@ const CATS = [
     { repo: 'slapbox', name: 'slapbox', desc: 'A stress-relief mod for Claude Code to reach for when it messes up.' },
     { repo: 'jarvis-codex-bot', name: 'Jarvis Codex Bot', desc: 'A Telegram assistant on Codex and OpenRouter — text, voice, images and files.' },
   ] },
-  { title: '🧰 Tools & Fun', items: [
+  { title: 'Tools & Fun', icon: 'tools', items: [
     { repo: 'godot-strudel', name: 'Strudel for Godot', desc: 'The Strudel live-coding engine ported to GDScript so patterns play inside a game.' },
     { repo: 'hermes-ru-locale', name: 'Hermes RU Locale', desc: 'A full Russian localization for the Hermes Agent desktop app.' },
     { repo: 'gitlife', name: 'GitLife', desc: 'Your whole life laid out as a GitHub contribution graph.' },
@@ -318,6 +380,35 @@ const CATS = [
     { repo: 'pip-twin', name: 'PiP Twin', desc: 'A Chrome extension that mirrors the playing video into a second window.' },
   ] },
 ];
+
+// Localized one-sentence descriptions per repo (English comes from the card's own `desc` above).
+const DESC = {
+  'YuE2-Studio': { ru: 'Песни целиком с вокалом по промпту, редактируемая партитура, каверы и караоке-клипы.', zh: '按提示生成带人声的完整歌曲，可编辑乐谱、翻唱与卡拉OK片段。', ja: 'プロンプトからボーカル付きのフル楽曲、編集可能な譜面、カバーやカラオケ映像。', ko: '프롬프트로 보컬이 있는 완성곡, 편집 가능한 악보, 커버와 노래방 클립.', pt: 'Músicas completas com vocais a partir de um prompt, partitura editável, covers e clipes de karaokê.', es: 'Canciones completas con voces desde un prompt, partitura editable, covers y clips de karaoke.', fr: 'Chansons complètes avec voix depuis un prompt, partition éditable, reprises et clips karaoké.' },
+  'ACE-Step-Studio': { ru: 'Локальная Suno — песни с вокалом, каверы и клипы, всё генерится на твоём компьютере.', zh: '本地版 Suno — 带人声的歌曲、翻唱与音乐视频，全部在你自己的电脑上生成。', ja: 'ローカル版 Suno — ボーカル付き楽曲、カバー、ミュージックビデオを自分の PC で生成。', ko: '로컬 Suno — 보컬 곡, 커버, 뮤직비디오를 내 컴퓨터에서 직접 생성.', pt: 'Um Suno local — músicas com vocais, covers e videoclipes, tudo gerado na sua máquina.', es: 'Un Suno local — canciones con voces, covers y videoclips, todo generado en tu equipo.', fr: 'Un Suno local — chansons avec voix, reprises et clips, le tout généré sur votre machine.' },
+  'dub-studio': { ru: 'Open-source CapCut для ИИ-дубляжа: переозвучка любого видео на другой язык клонированным голосом.', zh: '开源版 CapCut 的 AI 配音：用克隆声音把任意视频重新配成另一种语言。', ja: 'AI 吹き替えのオープンソース版 CapCut：任意の動画をクローン音声で別言語に再録。', ko: 'AI 더빙용 오픈소스 CapCut: 어떤 영상이든 복제 음성으로 다른 언어로 재녹음.', pt: 'Um CapCut open-source para dublagem com IA: redublar qualquer vídeo em outro idioma com voz clonada.', es: 'Un CapCut open-source para doblaje con IA: redoblar cualquier vídeo a otro idioma con voz clonada.', fr: 'Un CapCut open-source pour le doublage IA : redoubler n’importe quelle vidéo avec une voix clonée.' },
+  'MiniMax-Music3-Studio': { ru: 'Нативная локальная музыкальная студия на MiniMax Music 3, с опциональными облачными моделями.', zh: '基于 MiniMax Music 3 的本地原生音乐工作室，可选云端模型。', ja: 'MiniMax Music 3 によるネイティブなローカル音楽スタジオ。クラウドモデルも任意で。', ko: 'MiniMax Music 3 기반의 네이티브 로컬 음악 스튜디오, 선택형 클라우드 모델 지원.', pt: 'Um estúdio de música local nativo baseado no MiniMax Music 3, com modelos em nuvem opcionais.', es: 'Un estudio de música local nativo basado en MiniMax Music 3, con modelos en la nube opcionales.', fr: 'Un studio de musique local natif basé sur MiniMax Music 3, avec des modèles cloud en option.' },
+  'speech-studio': { ru: 'Синтез речи, клонирование голоса, аудиокниги и распознавание речи — пять движков, всё локально.', zh: '语音合成、声音克隆、有声书与语音识别 — 五个引擎，全部本地运行。', ja: '音声合成、ボイスクローン、オーディオブック、音声認識 — 5 つのエンジン、すべてローカル。', ko: '음성 합성, 음성 복제, 오디오북, 음성 인식 — 다섯 개 엔진, 모두 로컬.', pt: 'Síntese de voz, clonagem de voz, audiolivros e reconhecimento de fala — cinco motores, tudo local.', es: 'Síntesis de voz, clonación de voz, audiolibros y reconocimiento de voz — cinco motores, todo local.', fr: 'Synthèse vocale, clonage de voix, livres audio et reconnaissance vocale — cinq moteurs, tout en local.' },
+  'Bulka': { ru: 'Лайв-кодинг музыки в браузере: форк Strudel со встроенным ИИ-агентом, пишет паттерны вместе с тобой.', zh: '在浏览器里现场编写音乐：带内置 AI 智能体的 Strudel 分支，和你一起写节奏模式。', ja: 'ブラウザでの音楽ライブコーディング：AI エージェント内蔵の Strudel フォークが一緒にパターンを書く。', ko: '브라우저에서 라이브 코딩 음악: AI 에이전트가 내장된 Strudel 포크가 함께 패턴을 작성.', pt: 'Live-coding de música no navegador: um fork do Strudel com agente de IA que escreve padrões com você.', es: 'Live-coding de música en el navegador: un fork de Strudel con agente de IA que escribe patrones contigo.', fr: 'Live-coding musical dans le navigateur : un fork de Strudel avec un agent IA qui écrit les motifs avec vous.' },
+  'dungeon-ultimate': { ru: 'Офлайн ИИ-мастер подземелий — механики D&D, 3D-кости, генерация картинок и голос, без интернета.', zh: '离线 AI 地下城主 — D&D 机制、3D 骰子、图像生成与语音，无需联网。', ja: 'オフラインの AI ダンジョンマスター — D&D ルール、3D ダイス、画像生成と音声、ネット不要。', ko: '오프라인 AI 던전 마스터 — D&D 규칙, 3D 주사위, 이미지 생성과 음성, 인터넷 불필요.', pt: 'Um mestre de masmorra com IA offline — mecânicas de D&D, dados 3D, geração de imagens e voz, sem internet.', es: 'Un máster de mazmorras con IA offline — mecánicas de D&D, dados 3D, generación de imágenes y voz, sin internet.', fr: 'Un maître de donjon IA hors ligne — mécaniques D&D, dés 3D, génération d’images et voix, sans internet.' },
+  'videosos': { ru: 'ИИ-производство видео в браузере — 100+ моделей, липсинк и image-to-video.', zh: '浏览器中的 AI 视频制作 — 100+ 模型、口型同步与图生视频。', ja: 'ブラウザでの AI 動画制作 — 100 以上のモデル、リップシンク、画像から動画。', ko: '브라우저에서 AI 영상 제작 — 100개 이상의 모델, 립싱크, 이미지-투-비디오.', pt: 'Produção de vídeo com IA no navegador — mais de 100 modelos, lip sync e imagem-para-vídeo.', es: 'Producción de vídeo con IA en el navegador — más de 100 modelos, lip sync e imagen-a-vídeo.', fr: 'Production vidéo IA dans le navigateur — plus de 100 modèles, lip sync et image-vers-vidéo.' },
+  'SuperCaption_Qwen3-VL': { ru: 'Описание и теги для картинок и видео на Qwen3-VL и 50+ готовых шаблонах.', zh: '用 Qwen3-VL 和 50+ 模板为图像和视频生成描述与标签。', ja: 'Qwen3-VL と 50 以上のテンプレートで画像・動画のキャプションとタグ付け。', ko: 'Qwen3-VL과 50개 이상의 템플릿으로 이미지·영상 캡션과 태깅.', pt: 'Legendas e tags para imagens e vídeos com Qwen3-VL e mais de 50 modelos prontos.', es: 'Descripciones y etiquetas para imágenes y vídeos con Qwen3-VL y más de 50 plantillas.', fr: 'Légendes et tags pour images et vidéos avec Qwen3-VL et plus de 50 modèles prêts.' },
+  'telegram-api-mcp': { ru: 'Весь Telegram Bot API как MCP-сервер — все 185 методов в одном месте.', zh: '完整的 Telegram Bot API 作为 MCP 服务器 — 全部 185 个方法。', ja: 'Telegram Bot API 全体を MCP サーバーに — 185 メソッドすべて。', ko: '전체 Telegram Bot API를 MCP 서버로 — 185개 메서드 모두.', pt: 'Toda a API de bots do Telegram como servidor MCP — os 185 métodos num só lugar.', es: 'Toda la API de bots de Telegram como servidor MCP — los 185 métodos en un solo sitio.', fr: 'Toute l’API bot Telegram en serveur MCP — les 185 méthodes au même endroit.' },
+  'civitai-mcp-ultimate': { ru: 'Civitai API как MCP-сервер: модели, картинки и тренды для твоего агента.', zh: 'Civitai API 作为 MCP 服务器：为你的智能体提供模型、图片与趋势。', ja: 'Civitai API を MCP サーバーに：エージェント向けのモデル・画像・トレンド。', ko: 'Civitai API를 MCP 서버로: 에이전트를 위한 모델, 이미지, 트렌드.', pt: 'A API do Civitai como servidor MCP: modelos, imagens e tendências para o seu agente.', es: 'La API de Civitai como servidor MCP: modelos, imágenes y tendencias para tu agente.', fr: 'L’API Civitai en serveur MCP : modèles, images et tendances pour votre agent.' },
+  'trail-spec': { ru: 'TRAIL — кросс-MCP протокол для отслеживания происхождения сгенерированного контента.', zh: 'TRAIL — 跨 MCP 协议，用于追踪生成内容的来源。', ja: 'TRAIL — 生成コンテンツの出所を追跡するクロス MCP プロトコル。', ko: 'TRAIL — 생성 콘텐츠의 출처를 추적하는 크로스 MCP 프로토콜.', pt: 'TRAIL — um protocolo entre MCPs para rastrear a origem do conteúdo gerado.', es: 'TRAIL — un protocolo entre MCP para rastrear el origen del contenido generado.', fr: 'TRAIL — un protocole inter-MCP pour tracer l’origine du contenu généré.' },
+  'hota-mcp': { ru: 'ИИ-агент играет в Heroes III: Horn of the Abyss как живой человек.', zh: 'AI 智能体像真人一样玩《英雄无敌 3：深渊号角》。', ja: 'AI エージェントが『Heroes III: Horn of the Abyss』を人間のようにプレイ。', ko: 'AI 에이전트가 사람처럼 Heroes III: Horn of the Abyss를 플레이.', pt: 'Um agente de IA que joga Heroes III: Horn of the Abyss como um jogador humano.', es: 'Un agente de IA que juega a Heroes III: Horn of the Abyss como un jugador humano.', fr: 'Un agent IA qui joue à Heroes III: Horn of the Abyss comme un vrai joueur.' },
+  'givememod': { ru: 'Скажи /givememod — и Claude Code соберёт мод под задачу прямо перед тобой.', zh: '说一句 /givememod，Claude Code 就为眼前的任务做一个 mod。', ja: '/givememod と言えば、Claude Code が目の前のタスク用の mod を作る。', ko: '/givememod 한마디면 Claude Code가 눈앞의 작업에 맞는 mod를 만든다.', pt: 'Diga /givememod e o Claude Code cria um mod para a tarefa à sua frente.', es: 'Di /givememod y Claude Code crea un mod para la tarea que tienes delante.', fr: 'Dites /givememod et Claude Code fabrique un mod pour la tâche en cours.' },
+  'prompt-warrior': { ru: 'Геймифицированный аналитический портрет того, как ты на самом деле работаешь с ИИ.', zh: '用游戏化方式分析你与 AI 实际协作方式的画像。', ja: 'あなたが実際に AI とどう向き合うかを描くゲーム化された分析ポートレート。', ko: '당신이 실제로 AI와 어떻게 일하는지 보여주는 게임화된 분석 초상.', pt: 'Um retrato analítico e gamificado de como você realmente trabalha com IA.', es: 'Un retrato analítico y gamificado de cómo trabajas realmente con la IA.', fr: 'Un portrait analytique et ludique de votre façon réelle de travailler avec l’IA.' },
+  'satori': { ru: 'Самообучающийся цикл для Claude Code — твои правки становятся переиспользуемыми скиллами.', zh: 'Claude Code 的自我学习循环 — 你的修正会变成可复用的技能。', ja: 'Claude Code の自己学習ループ — あなたの修正が再利用可能なスキルになる。', ko: 'Claude Code를 위한 자기 학습 루프 — 당신의 수정이 재사용 가능한 스킬이 된다.', pt: 'Um ciclo de autoaprendizado para o Claude Code — suas correções viram skills reutilizáveis.', es: 'Un ciclo de autoaprendizaje para Claude Code — tus correcciones se vuelven skills reutilizables.', fr: 'Une boucle d’auto-apprentissage pour Claude Code — vos corrections deviennent des skills réutilisables.' },
+  'dream-skill': { ru: 'Консолидация памяти для Claude Code с проходами «сон» и «пробуждение».', zh: 'Claude Code 的记忆整理，带“做梦”与“醒来”两道流程。', ja: 'Claude Code のメモリ統合。「夢」と「目覚め」のパスで整理。', ko: 'Claude Code를 위한 메모리 통합 — 꿈과 깨어남 패스로 정리.', pt: 'Consolidação de memória para o Claude Code com passagens de sonho e despertar.', es: 'Consolidación de memoria para Claude Code con pasadas de sueño y despertar.', fr: 'Consolidation de mémoire pour Claude Code avec des passes de rêve et de réveil.' },
+  'angry-switcher': { ru: 'Ругайся на Claude Code сколько хочешь — он тихо читает вычищенную версию.', zh: '随便骂 Claude Code — 它只会悄悄读清理过的版本。', ja: 'Claude Code にいくら悪態をついても、裏で整えた版を読んでくれる。', ko: 'Claude Code에 마음껏 욕해도 — 조용히 정제된 버전을 읽는다.', pt: 'Xingue o Claude Code à vontade — ele lê, em silêncio, a versão limpa.', es: 'Insulta a Claude Code cuanto quieras — él lee, en silencio, la versión limpia.', fr: 'Insultez Claude Code autant que vous voulez — il lit discrètement la version nettoyée.' },
+  'slapbox': { ru: 'Мод-антистресс для Claude Code, когда он накосячил.', zh: '当 Claude Code 搞砸时用的解压 mod。', ja: 'Claude Code がやらかした時のためのストレス解消 mod。', ko: 'Claude Code가 실수했을 때 쓰는 스트레스 해소 mod.', pt: 'Um mod antiestresse para o Claude Code quando ele erra.', es: 'Un mod antiestrés para Claude Code cuando se equivoca.', fr: 'Un mod anti-stress pour Claude Code quand il se plante.' },
+  'jarvis-codex-bot': { ru: 'Telegram-ассистент на Codex и OpenRouter — текст, голос, картинки и файлы.', zh: '基于 Codex 和 OpenRouter 的 Telegram 助手 — 文本、语音、图片与文件。', ja: 'Codex と OpenRouter による Telegram アシスタント — テキスト・音声・画像・ファイル。', ko: 'Codex와 OpenRouter 기반 Telegram 어시스턴트 — 텍스트, 음성, 이미지, 파일.', pt: 'Um assistente de Telegram em Codex e OpenRouter — texto, voz, imagens e arquivos.', es: 'Un asistente de Telegram en Codex y OpenRouter — texto, voz, imágenes y archivos.', fr: 'Un assistant Telegram sur Codex et OpenRouter — texte, voix, images et fichiers.' },
+  'godot-strudel': { ru: 'Движок лайв-кодинга Strudel, портированный на GDScript — паттерны играют прямо в игре.', zh: '把 Strudel 现场编码引擎移植到 GDScript，节奏模式直接在游戏里播放。', ja: 'Strudel のライブコーディングエンジンを GDScript に移植。ゲーム内でパターンが鳴る。', ko: 'Strudel 라이브 코딩 엔진을 GDScript로 포팅 — 게임 안에서 패턴이 재생.', pt: 'O motor de live-coding Strudel portado para GDScript — os padrões tocam dentro do jogo.', es: 'El motor de live-coding Strudel portado a GDScript — los patrones suenan dentro del juego.', fr: 'Le moteur de live-coding Strudel porté en GDScript — les motifs jouent dans le jeu.' },
+  'hermes-ru-locale': { ru: 'Полная русская локализация десктоп-приложения Hermes Agent.', zh: 'Hermes Agent 桌面应用的完整俄语本地化。', ja: 'Hermes Agent デスクトップアプリの完全なロシア語ローカライズ。', ko: 'Hermes Agent 데스크톱 앱의 완전한 러시아어 현지화.', pt: 'Uma localização completa em russo para o app desktop Hermes Agent.', es: 'Una localización completa al ruso para la app de escritorio Hermes Agent.', fr: 'Une localisation russe complète de l’application de bureau Hermes Agent.' },
+  'gitlife': { ru: 'Вся твоя жизнь в виде графа контрибуций GitHub.', zh: '把你的一生画成 GitHub 贡献图。', ja: 'あなたの人生を GitHub のコントリビューショングラフで。', ko: '당신의 인생을 GitHub 기여 그래프로.', pt: 'Toda a sua vida apresentada como um gráfico de contribuições do GitHub.', es: 'Toda tu vida representada como un gráfico de contribuciones de GitHub.', fr: 'Toute votre vie présentée comme un graphe de contributions GitHub.' },
+  'tg-challenge-bot': { ru: 'ИИ-бот для челленджей в Telegram-сообществах художников.', zh: '面向 Telegram 艺术社区的 AI 挑战赛机器人。', ja: 'Telegram のアート系コミュニティ向け AI チャレンジボット。', ko: 'Telegram 아트 커뮤니티를 위한 AI 챌린지 봇.', pt: 'Um bot de desafios com IA para comunidades de arte no Telegram.', es: 'Un bot de retos con IA para comunidades de arte en Telegram.', fr: 'Un bot de défis IA pour les communautés d’art sur Telegram.' },
+  'pip-twin': { ru: 'Расширение Chrome, которое дублирует проигрываемое видео во второе окно.', zh: '一个 Chrome 扩展，把正在播放的视频镜像到第二个窗口。', ja: '再生中の動画を 2 つ目のウィンドウに映す Chrome 拡張。', ko: '재생 중인 영상을 두 번째 창에 그대로 띄우는 Chrome 확장.', pt: 'Uma extensão do Chrome que espelha o vídeo em reprodução numa segunda janela.', es: 'Una extensión de Chrome que refleja el vídeo en reproducción en una segunda ventana.', fr: 'Une extension Chrome qui duplique la vidéo en lecture dans une seconde fenêtre.' },
+};
 
 // ---- README -----------------------------------------------------------------------------------
 // section headers, translated; the catalog below stays English (project names are proper nouns)
@@ -383,7 +474,7 @@ function readme(s, lang) {
   const switcher = LANGS.map((l) => (l === lang ? `**${LANGNAME[l]}**` : `[${LANGNAME[l]}](${file(l)})`)).join(' · ');
   const updated = new Date(s.updated || Date.now()).toISOString().slice(0, 10);
   const note = NOTE[lang] || NOTE.en;
-  const more = CATS.map((c) => `#### ${c.title}\n\n${linkGrid(c.items)}`).join('\n\n');
+  const more = CATS.map((c) => `#### <img src="dist/cat-${c.icon}.svg" width="18" valign="middle"> ${c.title}\n\n${linkGrid(c.items, lang)}`).join('\n\n');
   return `<div align="center">
 
 ${switcher}
@@ -400,7 +491,7 @@ ${HERO}
 
 ### ${sec.apps}
 
-${linkGrid(FEATURED)}
+${linkGrid(FEATURED, lang)}
 
 ### ${t.dev_h}
 
@@ -456,12 +547,12 @@ async function main() {
 
   await mkdir(join(ROOT, 'dist'), { recursive: true });
   await writeFile(join(ROOT, 'stats.json'), JSON.stringify(stats, null, 2) + '\n');
-  // one tile per project so each can be its own link in the README
-  for (const p of featured) await writeFile(join(ROOT, 'dist', `tile-${p.repo}.svg`), tileSvg(p));
-  for (const c of CATS) for (const it of c.items) {
-    await writeFile(join(ROOT, 'dist', `tile-${it.repo}.svg`), tileSvg({ ...it, stars: starsOf(it.repo), downloads: dlOf(it.repo) }));
-  }
+  for (const c of CATS) await writeFile(join(ROOT, 'dist', `cat-${c.icon}.svg`), catIcon(c.icon));
+  // one tile per project per language (localized description), so each card is its own clickable link
+  const catItems = CATS.flatMap((c) => c.items.map((it) => ({ ...it, stars: starsOf(it.repo), downloads: dlOf(it.repo) })));
+  const allTiles = [...featured, ...catItems];
   for (const lang of LANGS) {
+    for (const p of allTiles) await writeFile(join(ROOT, 'dist', `tile-${p.repo}-${lang}.svg`), tileSvg(p, lang));
     await writeFile(join(ROOT, 'dist', `usage-${lang}.svg`), usageSvg(stats, lang));
     await writeFile(join(ROOT, 'dist', `dev-${lang}.svg`), devSvg(stats, lang));
     await writeFile(join(ROOT, lang === 'en' ? 'README.md' : `README.${lang}.md`), readme(stats, lang));

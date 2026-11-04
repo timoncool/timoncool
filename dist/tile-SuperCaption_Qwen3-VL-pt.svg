@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="408" height="112" viewBox="0 0 408 112" role="img" aria-label="SuperCaption Qwen3-VL">
+  <rect x="1" y="1" width="406" height="110" rx="14" fill="#161b22" stroke="#30363d"/>
+  <rect x="1" y="1" width="4" height="110" rx="2" fill="#1f6feb"/>
+  <text x="20" y="42" fill="#e6edf3" font-size="16.5" font-weight="700" font-family="'Segoe UI',system-ui,-apple-system,sans-serif">SuperCaption Qwen3-VL</text>
+  <text x="20" y="65" fill="#8b949e" font-size="12.5" font-family="'Segoe UI',system-ui,-apple-system,sans-serif">Legendas e tags para imagens e vídeos com</text><text x="20" y="82" fill="#8b949e" font-size="12.5" font-family="'Segoe UI',system-ui,-apple-system,sans-serif">Qwen3-VL e mais de 50 modelos prontos.</text>
+  <line x1="288" y1="16" x2="288" y2="96" stroke="#30363d"/>
+  <text x="306" y="48" text-anchor="middle" fill="#58a6ff" font-size="17" font-family="'Segoe UI',system-ui,-apple-system,sans-serif">★</text><text x="328" y="47" fill="#e6edf3" font-size="16" font-weight="700" font-family="'Segoe UI',system-ui,-apple-system,sans-serif">23</text><g fill="none" stroke="#58a6ff" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M306,61 L306,71"/><path d="M302,67 L306,71 L310,67"/><path d="M300,75 L312,75"/></g><text x="328" y="73" fill="#e6edf3" font-size="16" font-weight="700" font-family="'Segoe UI',system-ui,-apple-system,sans-serif">201</text>
+</svg>
