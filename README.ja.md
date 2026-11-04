@@ -19,24 +19,13 @@
 
 ### 注目のアプリ
 
-<table>
-  <tr>
-    <td width="416" valign="top"><a href="https://github.com/timoncool/YuE2-Studio"><img src="dist/tile-YuE2-Studio-ja.svg" width="408" alt="YuE2 Studio"></a></td>
-    <td width="416" valign="top"><a href="https://github.com/timoncool/ACE-Step-Studio"><img src="dist/tile-ACE-Step-Studio-ja.svg" width="408" alt="ACE-Step Studio"></a></td>
-  </tr>
-  <tr>
-    <td width="416" valign="top"><a href="https://github.com/timoncool/dub-studio"><img src="dist/tile-dub-studio-ja.svg" width="408" alt="Dub Studio"></a></td>
-    <td width="416" valign="top"><a href="https://github.com/timoncool/MiniMax-Music3-Studio"><img src="dist/tile-MiniMax-Music3-Studio-ja.svg" width="408" alt="MiniMax Music3"></a></td>
-  </tr>
-  <tr>
-    <td width="416" valign="top"><a href="https://github.com/timoncool/speech-studio"><img src="dist/tile-speech-studio-ja.svg" width="408" alt="Speech Studio"></a></td>
-    <td width="416" valign="top"><a href="https://github.com/timoncool/Bulka"><img src="dist/tile-Bulka-ja.svg" width="408" alt="Bulka"></a></td>
-  </tr>
-  <tr>
-    <td width="416" valign="top"><a href="https://github.com/timoncool/dungeon-ultimate"><img src="dist/tile-dungeon-ultimate-ja.svg" width="408" alt="Dungeon Ultimate"></a></td>
-    <td></td>
-  </tr>
-</table>
+<a href="https://github.com/timoncool/YuE2-Studio"><img src="dist/tile-YuE2-Studio-ja.svg" width="408" alt="YuE2 Studio"></a> <a href="https://github.com/timoncool/ACE-Step-Studio"><img src="dist/tile-ACE-Step-Studio-ja.svg" width="408" alt="ACE-Step Studio"></a>
+
+<a href="https://github.com/timoncool/dub-studio"><img src="dist/tile-dub-studio-ja.svg" width="408" alt="Dub Studio"></a> <a href="https://github.com/timoncool/MiniMax-Music3-Studio"><img src="dist/tile-MiniMax-Music3-Studio-ja.svg" width="408" alt="MiniMax Music3"></a>
+
+<a href="https://github.com/timoncool/speech-studio"><img src="dist/tile-speech-studio-ja.svg" width="408" alt="Speech Studio"></a> <a href="https://github.com/timoncool/Bulka"><img src="dist/tile-Bulka-ja.svg" width="408" alt="Bulka"></a>
+
+<a href="https://github.com/timoncool/dungeon-ultimate"><img src="dist/tile-dungeon-ultimate-ja.svg" width="408" alt="Dungeon Ultimate"></a>
 
 ### プロジェクトの作業
 
@@ -46,76 +35,31 @@
 
 #### <img src="dist/cat-video.svg" width="18" valign="middle"> Video & Vision
 
-<table>
-  <tr>
-    <td width="416" valign="top"><a href="https://github.com/timoncool/videosos"><img src="dist/tile-videosos-ja.svg" width="408" alt="VideoSOS"></a></td>
-    <td width="416" valign="top"><a href="https://github.com/timoncool/SuperCaption_Qwen3-VL"><img src="dist/tile-SuperCaption_Qwen3-VL-ja.svg" width="408" alt="SuperCaption Qwen3-VL"></a></td>
-  </tr>
-</table>
+<a href="https://github.com/timoncool/videosos"><img src="dist/tile-videosos-ja.svg" width="408" alt="VideoSOS"></a> <a href="https://github.com/timoncool/SuperCaption_Qwen3-VL"><img src="dist/tile-SuperCaption_Qwen3-VL-ja.svg" width="408" alt="SuperCaption Qwen3-VL"></a>
 
 #### <img src="dist/cat-mcp.svg" width="18" valign="middle"> MCP Servers
 
-<table>
-  <tr>
-    <td width="416" valign="top"><a href="https://github.com/timoncool/telegram-api-mcp"><img src="dist/tile-telegram-api-mcp-ja.svg" width="408" alt="telegram-api-mcp"></a></td>
-    <td width="416" valign="top"><a href="https://github.com/timoncool/civitai-mcp-ultimate"><img src="dist/tile-civitai-mcp-ultimate-ja.svg" width="408" alt="civitai-mcp-ultimate"></a></td>
-  </tr>
-  <tr>
-    <td width="416" valign="top"><a href="https://github.com/timoncool/trail-spec"><img src="dist/tile-trail-spec-ja.svg" width="408" alt="trail-spec"></a></td>
-    <td width="416" valign="top"><a href="https://github.com/timoncool/hota-mcp"><img src="dist/tile-hota-mcp-ja.svg" width="408" alt="HotA MCP"></a></td>
-  </tr>
-</table>
+<a href="https://github.com/timoncool/telegram-api-mcp"><img src="dist/tile-telegram-api-mcp-ja.svg" width="408" alt="telegram-api-mcp"></a> <a href="https://github.com/timoncool/civitai-mcp-ultimate"><img src="dist/tile-civitai-mcp-ultimate-ja.svg" width="408" alt="civitai-mcp-ultimate"></a>
+
+<a href="https://github.com/timoncool/trail-spec"><img src="dist/tile-trail-spec-ja.svg" width="408" alt="trail-spec"></a> <a href="https://github.com/timoncool/hota-mcp"><img src="dist/tile-hota-mcp-ja.svg" width="408" alt="HotA MCP"></a>
 
 #### <img src="dist/cat-agents.svg" width="18" valign="middle"> AI Agents & Claude Code
 
-<table>
-  <tr>
-    <td width="416" valign="top"><a href="https://github.com/timoncool/givememod"><img src="dist/tile-givememod-ja.svg" width="408" alt="givememod"></a></td>
-    <td width="416" valign="top"><a href="https://github.com/timoncool/prompt-warrior"><img src="dist/tile-prompt-warrior-ja.svg" width="408" alt="Prompt Warrior"></a></td>
-  </tr>
-  <tr>
-    <td width="416" valign="top"><a href="https://github.com/timoncool/satori"><img src="dist/tile-satori-ja.svg" width="408" alt="satori"></a></td>
-    <td width="416" valign="top"><a href="https://github.com/timoncool/dream-skill"><img src="dist/tile-dream-skill-ja.svg" width="408" alt="dream-skill"></a></td>
-  </tr>
-  <tr>
-    <td width="416" valign="top"><a href="https://github.com/timoncool/angry-switcher"><img src="dist/tile-angry-switcher-ja.svg" width="408" alt="Angry Switcher"></a></td>
-    <td width="416" valign="top"><a href="https://github.com/timoncool/slapbox"><img src="dist/tile-slapbox-ja.svg" width="408" alt="slapbox"></a></td>
-  </tr>
-  <tr>
-    <td width="416" valign="top"><a href="https://github.com/timoncool/jarvis-codex-bot"><img src="dist/tile-jarvis-codex-bot-ja.svg" width="408" alt="Jarvis Codex Bot"></a></td>
-    <td></td>
-  </tr>
-</table>
+<a href="https://github.com/timoncool/givememod"><img src="dist/tile-givememod-ja.svg" width="408" alt="givememod"></a> <a href="https://github.com/timoncool/prompt-warrior"><img src="dist/tile-prompt-warrior-ja.svg" width="408" alt="Prompt Warrior"></a>
+
+<a href="https://github.com/timoncool/satori"><img src="dist/tile-satori-ja.svg" width="408" alt="satori"></a> <a href="https://github.com/timoncool/dream-skill"><img src="dist/tile-dream-skill-ja.svg" width="408" alt="dream-skill"></a>
+
+<a href="https://github.com/timoncool/angry-switcher"><img src="dist/tile-angry-switcher-ja.svg" width="408" alt="Angry Switcher"></a> <a href="https://github.com/timoncool/slapbox"><img src="dist/tile-slapbox-ja.svg" width="408" alt="slapbox"></a>
+
+<a href="https://github.com/timoncool/jarvis-codex-bot"><img src="dist/tile-jarvis-codex-bot-ja.svg" width="408" alt="Jarvis Codex Bot"></a>
 
 #### <img src="dist/cat-tools.svg" width="18" valign="middle"> Tools & Fun
 
-<table>
-  <tr>
-    <td width="416" valign="top"><a href="https://github.com/timoncool/godot-strudel"><img src="dist/tile-godot-strudel-ja.svg" width="408" alt="Strudel for Godot"></a></td>
-    <td width="416" valign="top"><a href="https://github.com/timoncool/hermes-ru-locale"><img src="dist/tile-hermes-ru-locale-ja.svg" width="408" alt="Hermes RU Locale"></a></td>
-  </tr>
-  <tr>
-    <td width="416" valign="top"><a href="https://github.com/timoncool/gitlife"><img src="dist/tile-gitlife-ja.svg" width="408" alt="GitLife"></a></td>
-    <td width="416" valign="top"><a href="https://github.com/timoncool/tg-challenge-bot"><img src="dist/tile-tg-challenge-bot-ja.svg" width="408" alt="tg-challenge-bot"></a></td>
-  </tr>
-  <tr>
-    <td width="416" valign="top"><a href="https://github.com/timoncool/pip-twin"><img src="dist/tile-pip-twin-ja.svg" width="408" alt="PiP Twin"></a></td>
-    <td></td>
-  </tr>
-</table>
+<a href="https://github.com/timoncool/godot-strudel"><img src="dist/tile-godot-strudel-ja.svg" width="408" alt="Strudel for Godot"></a> <a href="https://github.com/timoncool/hermes-ru-locale"><img src="dist/tile-hermes-ru-locale-ja.svg" width="408" alt="Hermes RU Locale"></a>
 
-### 技術スタック
+<a href="https://github.com/timoncool/gitlife"><img src="dist/tile-gitlife-ja.svg" width="408" alt="GitLife"></a> <a href="https://github.com/timoncool/tg-challenge-bot"><img src="dist/tile-tg-challenge-bot-ja.svg" width="408" alt="tg-challenge-bot"></a>
 
-<details>
-<summary><h4>技術スタック</h4></summary>
-
-![Rust](https://img.shields.io/badge/Rust-2b2b2b?logo=rust&logoColor=white) ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?logo=typescript&logoColor=white) ![Python](https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=white) ![C++](https://img.shields.io/badge/C%2B%2B-00599C?logo=cplusplus&logoColor=white) ![CUDA](https://img.shields.io/badge/CUDA-76B900?logo=nvidia&logoColor=white) ![GDScript](https://img.shields.io/badge/GDScript-478CBF?logo=godotengine&logoColor=white)
-
-![Tauri](https://img.shields.io/badge/Tauri-24C8DB?logo=tauri&logoColor=black) ![React](https://img.shields.io/badge/React-61DAFB?logo=react&logoColor=black) ![Vite](https://img.shields.io/badge/Vite-646CFF?logo=vite&logoColor=white) ![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-06B6D4?logo=tailwindcss&logoColor=white)
-
-![ggml / llama.cpp](https://img.shields.io/badge/ggml_%2F_llama.cpp-333) ![ONNX Runtime](https://img.shields.io/badge/ONNX_Runtime-005CED?logo=onnx&logoColor=white) ![Hugging Face](https://img.shields.io/badge/Hugging_Face-FFD21E?logo=huggingface&logoColor=black) ![MCP](https://img.shields.io/badge/MCP-2b2b2b?logo=modelcontextprotocol&logoColor=white) ![Claude Code](https://img.shields.io/badge/Claude_Code-D97757?logo=claude&logoColor=white) ![Cloudflare Workers](https://img.shields.io/badge/Cloudflare_Workers-F38020?logo=cloudflareworkers&logoColor=white)
-
-</details>
+<a href="https://github.com/timoncool/pip-twin"><img src="dist/tile-pip-twin-ja.svg" width="408" alt="PiP Twin"></a>
 
 ### 活動を支援する
 

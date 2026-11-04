@@ -388,12 +388,12 @@ function tileSvg(p, lang) {
 </svg>`;
 }
 
-// A 2-column table of clickable project cards for a language: each cell links its tile image to the repo.
+// Two clickable project cards per row, as inline images (no <table>, so GitHub draws no cell borders).
 function linkGrid(items, lang) {
-  const cell = (p) => `<td width="416" valign="top"><a href="https://github.com/${LOGIN}/${p.repo}"><img src="dist/tile-${p.repo}-${lang}.svg" width="408" alt="${esc(p.name)}"></a></td>`;
-  let rows = '';
-  for (let i = 0; i < items.length; i += 2) rows += `  <tr>\n    ${cell(items[i])}\n    ${items[i + 1] ? cell(items[i + 1]) : '<td></td>'}\n  </tr>\n`;
-  return `<table>\n${rows}</table>`;
+  const cell = (p) => `<a href="https://github.com/${LOGIN}/${p.repo}"><img src="dist/tile-${p.repo}-${lang}.svg" width="408" alt="${esc(p.name)}"></a>`;
+  const rows = [];
+  for (let i = 0; i < items.length; i += 2) rows.push(cell(items[i]) + (items[i + 1] ? ' ' + cell(items[i + 1]) : ''));
+  return rows.join('\n\n');
 }
 
 // The rest of the catalog, grouped. Stars are merged from the GitHub API in main(); descriptions are one sentence each.
@@ -543,10 +543,6 @@ ${linkGrid(FEATURED, lang)}
 ### ${sec.more}
 
 ${more}
-
-### ${sec.tech}
-
-${TECH.replace('__TECH__', sec.tech)}
 
 ### ${sec.support}
 
