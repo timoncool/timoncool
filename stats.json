@@ -1,45 +1,45 @@
 {
-  "updated": "2026-11-04T04:17:54.732Z",
+  "updated": "2026-11-04T13:17:54.691Z",
   "window_days": 30,
   "totals": {
-    "people": 12178,
-    "installs": 18653
+    "people": 12381,
+    "installs": 18945
   },
   "programs": [
     {
       "id": "yue2",
-      "people": 9968,
-      "installs": 13135
+      "people": 10107,
+      "installs": 13303
     },
     {
       "id": "ace",
-      "people": 1304,
-      "installs": 1791
+      "people": 1342,
+      "installs": 1831
     },
     {
       "id": "speech",
-      "people": 1073,
-      "installs": 1185
+      "people": 1094,
+      "installs": 1211
     },
     {
       "id": "dub",
-      "people": 836,
-      "installs": 1219
+      "people": 857,
+      "installs": 1240
     },
     {
       "id": "minimax",
-      "people": 733,
-      "installs": 903
+      "people": 750,
+      "installs": 921
     },
     {
       "id": "dungeon",
-      "people": 93,
-      "installs": 148
+      "people": 98,
+      "installs": 153
     },
     {
       "id": "bulka",
-      "people": 20,
-      "installs": 237
+      "people": 22,
+      "installs": 251
     },
     {
       "id": "videosos",
@@ -50,23 +50,23 @@
   "spread": [
     {
       "programs": 1,
-      "people": 10753
+      "people": 10926
     },
     {
       "programs": 2,
-      "people": 1091
+      "people": 1114
     },
     {
       "programs": 3,
-      "people": 263
+      "people": 268
     },
     {
       "programs": 4,
-      "people": 54
+      "people": 55
     },
     {
       "programs": 5,
-      "people": 15
+      "people": 16
     },
     {
       "programs": 6,
@@ -80,15 +80,15 @@
   "languages": [
     {
       "k": "en",
-      "installs": 9639
+      "installs": 9752
     },
     {
       "k": "zh",
-      "installs": 4743
+      "installs": 4845
     },
     {
       "k": "ru",
-      "installs": 3937
+      "installs": 4013
     },
     {
       "k": "pt",
@@ -96,15 +96,15 @@
     },
     {
       "k": "ko",
-      "installs": 115
+      "installs": 118
     },
     {
       "k": "es",
-      "installs": 104
+      "installs": 105
     },
     {
       "k": "ja",
-      "installs": 97
+      "installs": 99
     },
     {
       "k": "fr",
@@ -134,174 +134,174 @@
   "countries": [
     {
       "k": "other",
-      "installs": 5281
+      "installs": 5383
     },
     {
       "k": "ru",
-      "installs": 1844
+      "installs": 1877
     },
     {
       "k": "us",
-      "installs": 1811
+      "installs": 1837
     },
     {
       "k": "id",
-      "installs": 1217
+      "installs": 1224
     },
     {
       "k": "de",
-      "installs": 1000
+      "installs": 1014
     },
     {
       "k": "jp",
-      "installs": 688
+      "installs": 698
     },
     {
       "k": "hk",
-      "installs": 535
+      "installs": 547
     },
     {
       "k": "nl",
-      "installs": 524
+      "installs": 537
     },
     {
       "k": "br",
-      "installs": 461
+      "installs": 465
     },
     {
       "k": "gb",
-      "installs": 453
-    },
-    {
-      "k": "fr",
-      "installs": 387
+      "installs": 456
     },
     {
       "k": "kr",
-      "installs": 383
+      "installs": 389
+    },
+    {
+      "k": "fr",
+      "installs": 388
     },
     {
       "k": "it",
-      "installs": 342
+      "installs": 344
     },
     {
       "k": "sg",
-      "installs": 333
+      "installs": 339
     },
     {
       "k": "pl",
-      "installs": 316
+      "installs": 318
     },
     {
       "k": "in",
-      "installs": 285
+      "installs": 289
     },
     {
       "k": "ua",
-      "installs": 284
+      "installs": 286
     },
     {
       "k": "tw",
-      "installs": 236
+      "installs": 243
     },
     {
       "k": "es",
-      "installs": 218
+      "installs": 219
     },
     {
       "k": "vn",
-      "installs": 212
+      "installs": 216
+    },
+    {
+      "k": "au",
+      "installs": 193
     },
     {
       "k": "fi",
-      "installs": 190
+      "installs": 191
     },
     {
       "k": "se",
       "installs": 190
     },
     {
-      "k": "au",
-      "installs": 189
-    },
-    {
       "k": "ca",
-      "installs": 178
+      "installs": 179
     },
     {
       "k": "other",
-      "installs": 3061
+      "installs": 3127
     }
   ],
   "hardware": {
     "vendor": [
       {
         "k": "nvidia",
-        "installs": 14258
+        "installs": 14486
       },
       {
         "k": "none",
-        "installs": 2014
+        "installs": 2061
       },
       {
         "k": "amd",
-        "installs": 1312
+        "installs": 1320
       },
       {
         "k": "apple",
-        "installs": 685
+        "installs": 688
       },
       {
         "k": "other",
-        "installs": 454
+        "installs": 463
       },
       {
         "k": "intel",
-        "installs": 109
+        "installs": 112
       }
     ],
     "vram": [
       {
         "k": "<=8",
-        "installs": 8901
+        "installs": 9036
       },
       {
         "k": "16",
-        "installs": 3422
+        "installs": 3468
       },
       {
         "k": "12",
-        "installs": 2844
+        "installs": 2894
       },
       {
         "k": "?",
-        "installs": 2166
+        "installs": 2216
       },
       {
         "k": "24+",
-        "installs": 1499
+        "installs": 1516
       }
     ],
     "backend": [
       {
         "k": "cuda",
-        "installs": 13445
+        "installs": 13661
       },
       {
         "k": "vulkan",
-        "installs": 2406
+        "installs": 2435
       },
       {
         "k": "cpu",
-        "installs": 2015
+        "installs": 2051
       },
       {
         "k": "metal",
-        "installs": 691
+        "installs": 694
       },
       {
         "k": "web",
-        "installs": 208
+        "installs": 220
       },
       {
         "k": "cloud",
@@ -309,7 +309,7 @@
       },
       {
         "k": "desktop",
-        "installs": 29
+        "installs": 31
       },
       {
         "k": "cuda13",
@@ -320,23 +320,23 @@
   "os": [
     {
       "k": "windows",
-      "installs": 17496
+      "installs": 17764
     },
     {
       "k": "linux",
-      "installs": 740
+      "installs": 764
     },
     {
       "k": "macos",
-      "installs": 735
+      "installs": 741
     }
   ],
   "dev": {
-    "commits": 5619,
+    "commits": 5638,
     "pulls": 644,
-    "issues_closed": 231,
+    "issues_closed": 229,
     "releases": 199,
-    "stars": 5193,
+    "stars": 5223,
     "activity": [
       {
         "w": "2025-11-05",
@@ -548,66 +548,66 @@
       },
       {
         "w": "2026-11-01",
-        "c": 107
+        "c": 126
       }
     ],
-    "downloads": 318314
+    "downloads": 322199
   },
   "repos": [
     {
       "id": "yue2",
       "name": "YuE2 Studio",
-      "stars": 1851,
-      "people": 9968,
-      "downloads": 211973,
+      "stars": 1869,
+      "people": 10107,
+      "downloads": 214710,
       "url": "https://github.com/timoncool/YuE2-Studio"
     },
     {
       "id": "ace",
       "name": "ACE-Step Studio",
       "stars": 496,
-      "people": 1304,
-      "downloads": 31751,
+      "people": 1342,
+      "downloads": 32127,
       "url": "https://github.com/timoncool/ACE-Step-Studio"
     },
     {
       "id": "dub",
       "name": "Dub Studio",
-      "stars": 242,
-      "people": 836,
-      "downloads": 34344,
+      "stars": 245,
+      "people": 857,
+      "downloads": 34509,
       "url": "https://github.com/timoncool/dub-studio"
     },
     {
       "id": "minimax",
       "name": "MiniMax Music3",
-      "stars": 172,
-      "people": 733,
-      "downloads": 18681,
+      "stars": 175,
+      "people": 750,
+      "downloads": 18830,
       "url": "https://github.com/timoncool/MiniMax-Music3-Studio"
     },
     {
       "id": "speech",
       "name": "Speech Studio",
-      "stars": 201,
-      "people": 1073,
-      "downloads": 14886,
+      "stars": 207,
+      "people": 1094,
+      "downloads": 15282,
       "url": "https://github.com/timoncool/speech-studio"
     },
     {
       "id": "bulka",
       "name": "Bulka",
       "stars": 69,
-      "people": 20,
-      "downloads": 901,
+      "people": 22,
+      "downloads": 926,
       "url": "https://github.com/timoncool/Bulka"
     },
     {
       "id": "dungeon",
       "name": "Dungeon Ultimate",
       "stars": 25,
-      "people": 93,
-      "downloads": 3230,
+      "people": 98,
+      "downloads": 3258,
       "url": "https://github.com/timoncool/dungeon-ultimate"
     }
   ]
