@@ -332,7 +332,7 @@
     }
   ],
   "dev": {
-    "commits": 5609,
+    "commits": 5610,
     "pulls": 644,
     "issues_closed": 231,
     "releases": 199,
@@ -464,11 +464,11 @@
       },
       {
         "w": "2026-06-07",
-        "c": 15
+        "c": 16
       },
       {
         "w": "2026-06-14",
-        "c": 68
+        "c": 67
       },
       {
         "w": "2026-06-21",
@@ -532,15 +532,15 @@
       },
       {
         "w": "2026-10-04",
-        "c": 767
+        "c": 769
       },
       {
         "w": "2026-10-11",
-        "c": 766
+        "c": 765
       },
       {
         "w": "2026-10-18",
-        "c": 455
+        "c": 454
       },
       {
         "w": "2026-10-25",
@@ -548,10 +548,10 @@
       },
       {
         "w": "2026-11-01",
-        "c": 97
+        "c": 98
       }
     ],
-    "downloads": 318208
+    "downloads": 318232
   },
   "repos": [
     {
@@ -559,7 +559,7 @@
       "name": "YuE2 Studio",
       "stars": 1851,
       "people": 9968,
-      "downloads": 211892,
+      "downloads": 211909,
       "url": "https://github.com/timoncool/YuE2-Studio"
     },
     {
@@ -567,7 +567,7 @@
       "name": "ACE-Step Studio",
       "stars": 496,
       "people": 1304,
-      "downloads": 31739,
+      "downloads": 31740,
       "url": "https://github.com/timoncool/ACE-Step-Studio"
     },
     {
@@ -575,7 +575,7 @@
       "name": "Dub Studio",
       "stars": 242,
       "people": 836,
-      "downloads": 34337,
+      "downloads": 34339,
       "url": "https://github.com/timoncool/dub-studio"
     },
     {
@@ -591,7 +591,7 @@
       "name": "Speech Studio",
       "stars": 201,
       "people": 1073,
-      "downloads": 14881,
+      "downloads": 14885,
       "url": "https://github.com/timoncool/speech-studio"
     },
     {

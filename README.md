@@ -6,16 +6,14 @@
   <img src="https://readme-typing-svg.demolab.com/?lines=Free+local+AI+apps+for+everyone;Music+%C2%B7+Speech+%C2%B7+Video;Portable.+One+click.+Local-first.;Co-Founder+of+ArtGeneration.me&font=Fira+Code&center=true&width=500&height=50&color=58a6ff&vCenter=true&pause=1000&size=20" alt="" />
 </a>
 
-[![Telegram](https://img.shields.io/badge/Telegram-nerual__dreming-26A5E4?style=for-the-badge&logo=telegram&logoColor=white)](https://t.me/nerual_dreming)
-[![Website](https://img.shields.io/badge/neuro--cartel.com-000?style=for-the-badge&logo=google-chrome&logoColor=white)](https://neuro-cartel.com)
-[![YouTube](https://img.shields.io/badge/YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white)](https://www.youtube.com/@nerual_dreming)
-[![Sponsor](https://img.shields.io/badge/Sponsor-ea4aaa?style=for-the-badge&logo=githubsponsors&logoColor=white)](https://timoncool.github.io/YuE2-Studio/donate.html)
+<a href="https://t.me/nerual_dreming"><img src="dist/badge-telegram.svg" height="34" alt="Telegram"></a>
+<a href="https://neuro-cartel.com"><img src="dist/badge-website.svg" height="34" alt="neuro-cartel.com"></a>
+<a href="https://www.youtube.com/@nerual_dreming"><img src="dist/badge-youtube.svg" height="34" alt="YouTube"></a>
+<a href="https://timoncool.github.io/YuE2-Studio/donate.html"><img src="dist/badge-support.svg" height="34" alt="Support"></a>
 
 <a href="https://timoncool.github.io/YuE2-Studio/stats.html"><img src="dist/usage-en.svg" alt="Who uses my apps" width="840"></a>
 
 **[See the live usage stats →](https://timoncool.github.io/YuE2-Studio/stats.html)**
-
-<sub>Anonymous, opt-in usage from inside the apps — aggregated, no personal data, refreshed daily.</sub>
 
 </div>
 
@@ -43,8 +41,6 @@
 ### The work
 
 <img src="dist/dev-en.svg" alt="The work" width="840">
-
-<sub>Public activity from the GitHub API — refreshed daily.</sub>
 
 ### More projects
 
@@ -127,9 +123,9 @@
 
 I build free, open-source, local-first AI apps for everyone. Your support keeps them coming =)
 
-[![All donation methods](https://img.shields.io/badge/All_donation_methods-ea4aaa?style=for-the-badge&logo=githubsponsors&logoColor=white)](https://timoncool.github.io/YuE2-Studio/donate.html)
-[![dalink.to](https://img.shields.io/badge/Bank_card-dalink.to-29ABE2?style=for-the-badge&logo=stripe&logoColor=white)](https://dalink.to/nerual_dreming)
-[![Boosty](https://img.shields.io/badge/Monthly-Boosty-F15F2C?style=for-the-badge)](https://boosty.to/neuro_art)
+<a href="https://timoncool.github.io/YuE2-Studio/donate.html"><img src="dist/badge-donate.svg" height="34" alt="All donation methods"></a>
+<a href="https://dalink.to/nerual_dreming"><img src="dist/badge-card.svg" height="34" alt="Bank card — dalink.to"></a>
+<a href="https://boosty.to/neuro_art"><img src="dist/badge-boosty.svg" height="34" alt="Boosty"></a>
 
 <sub>
 

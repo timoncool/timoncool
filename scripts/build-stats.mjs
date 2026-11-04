@@ -136,24 +136,27 @@ const F = "font-family=\"'Segoe UI',system-ui,-apple-system,sans-serif\"";
 
 // A wide stat banner: 4 big numbers with labels, an accent stripe and an eyebrow. Native SVG elements only —
 // GitHub strips <style>, CSS, @keyframes, foreignObject and JS from SVGs loaded through <img>, but renders text/rect/line.
-function cardSvg(cells, eyebrow, titleRight) {
-  const W = 840, H = 112;
+function cardSvg(cells, eyebrow, titleRight, note) {
+  const W = 840, H = 104;
   const cw = (W - 48) / cells.length;
   const items = cells.map((c, i) => {
     const x = 24 + cw * i + cw / 2;
     const numW = numWidth(c.n, 19);
     const gx = x - (24 + numW) / 2; // centre the icon+number group
-    return (c.ic ? kpiIcon(c.ic, gx + 9, 68) : '') +
-      `<text x="${c.ic ? gx + 26 : x}" y="78" ${c.ic ? '' : 'text-anchor="middle" '}fill="${C.ink}" font-size="34" font-weight="800" ${F}>${esc(c.n)}</text>` +
-      `<text x="${x}" y="99" text-anchor="middle" fill="${C.mut}" font-size="14" ${F}>${esc(c.l)}</text>`;
+    return (c.ic ? kpiIcon(c.ic, gx + 9, 34) : '') +
+      `<text x="${c.ic ? gx + 26 : x}" y="44" ${c.ic ? '' : 'text-anchor="middle" '}fill="${C.ink}" font-size="34" font-weight="800" ${F}>${esc(c.n)}</text>` +
+      `<text x="${x}" y="64" text-anchor="middle" fill="${C.mut}" font-size="14" ${F}>${esc(c.l)}</text>`;
   }).join('');
-  const seps = cells.slice(1).map((_, i) => `<line x1="${24 + cw * (i + 1)}" y1="44" x2="${24 + cw * (i + 1)}" y2="96" stroke="${C.line}"/>`).join('');
+  const seps = cells.slice(1).map((_, i) => `<line x1="${24 + cw * (i + 1)}" y1="14" x2="${24 + cw * (i + 1)}" y2="62" stroke="${C.line}"/>`).join('');
+  // one footer line: eyebrow (left) · note (centre) · title (right)
+  const noteLine = note ? `\n  <text x="${W / 2}" y="93" text-anchor="middle" fill="${C.mut}" font-size="11" ${F}>${esc(note)}</text>` : '';
   return `<svg xmlns="http://www.w3.org/2000/svg" width="${W}" height="${H}" viewBox="0 0 ${W} ${H}" role="img" aria-label="${esc(titleRight)}">
   <rect x="1" y="1" width="${W - 2}" height="${H - 2}" rx="16" fill="${C.card}" stroke="${C.line}"/>
   <rect x="1" y="1" width="6" height="${H - 2}" rx="3" fill="${C.acc}"/>
-  <text x="24" y="28" fill="${C.acc2}" font-size="13" font-weight="700" letter-spacing="2" ${F}>${esc(eyebrow)}</text>
-  <text x="${W - 24}" y="28" text-anchor="end" fill="${C.mut}" font-size="13" ${F}>${esc(titleRight)}</text>
   ${seps}${items}
+  <line x1="24" y1="78" x2="${W - 24}" y2="78" stroke="${C.line}"/>
+  <text x="24" y="93" fill="${C.acc2}" font-size="11.5" font-weight="700" letter-spacing="1.5" ${F}>${esc(eyebrow)}</text>
+  <text x="${W - 24}" y="93" text-anchor="end" fill="${C.mut}" font-size="11.5" ${F}>${esc(titleRight)}</text>${noteLine}
 </svg>`;
 }
 
@@ -168,6 +171,45 @@ function catIcon(type) {
   return `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="${C.acc2}" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">${paths[type] || ''}</svg>`;
 }
 
+// Icons for the pill badges (hero + donate), drawn centered at (cx, cy).
+function badgeIcon(type, cx, cy) {
+  const s = `fill="none" stroke="${C.acc2}" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"`;
+  const d = C.acc2;
+  if (type === 'telegram') return `<path d="M${cx + 9},${cy - 7} L${cx - 9},${cy} L${cx - 3},${cy + 2.5} L${cx - 1},${cy + 7} L${cx + 1.5},${cy + 3} L${cx + 5},${cy + 6} Z" ${s}/>`;
+  if (type === 'globe') return `<g ${s}><circle cx="${cx}" cy="${cy}" r="8"/><ellipse cx="${cx}" cy="${cy}" rx="3.4" ry="8"/><path d="M${cx - 8},${cy} L${cx + 8},${cy}"/></g>`;
+  if (type === 'youtube') return `<g ${s}><rect x="${cx - 9}" y="${cy - 6.5}" width="18" height="13" rx="4"/><path d="M${cx - 2.5},${cy - 3} L${cx + 4},${cy} L${cx - 2.5},${cy + 3} Z" fill="${d}" stroke="none"/></g>`;
+  if (type === 'heart') return `<path d="M${cx},${cy + 6.5} C${cx - 9},${cy - 1} ${cx - 6},${cy - 8} ${cx - 2.5},${cy - 5} C${cx - 1},${cy - 3.8} ${cx},${cy - 2.5} ${cx},${cy - 2.5} C${cx},${cy - 2.5} ${cx + 1},${cy - 3.8} ${cx + 2.5},${cy - 5} C${cx + 6},${cy - 8} ${cx + 9},${cy - 1} ${cx},${cy + 6.5} Z" fill="${d}" stroke="none"/>`;
+  if (type === 'card') return `<g ${s}><rect x="${cx - 9}" y="${cy - 6}" width="18" height="12" rx="2"/><path d="M${cx - 9},${cy - 1.5} h18"/></g>`;
+  if (type === 'spark') return `<path d="M${cx},${cy - 8} L${cx + 2.6},${cy - 2.6} L${cx + 8},${cy} L${cx + 2.6},${cy + 2.6} L${cx},${cy + 8} L${cx - 2.6},${cy + 2.6} L${cx - 8},${cy} L${cx - 2.6},${cy - 2.6} Z" fill="${d}" stroke="none"/>`;
+  return '';
+}
+
+// A dark pill badge: blue icon + label, matching the cards. Width grows with the label.
+function badgeSvg(label, icon) {
+  const h = 36, pad = 15, iconSlot = icon ? 26 : 0, cy = h / 2;
+  const tw = Math.round([...label].reduce((a, ch) => a + (ch === ' ' ? 4.2 : /[.,'·]/.test(ch) ? 3.6 : /[iljtI]/.test(ch) ? 4.2 : /[mwMW]/.test(ch) ? 11 : 7.7), 0));
+  const W = pad + iconSlot + tw + pad;
+  const tx = pad + iconSlot;
+  return `<svg xmlns="http://www.w3.org/2000/svg" width="${W}" height="${h}" viewBox="0 0 ${W} ${h}" role="img" aria-label="${esc(label)}">
+  <rect x="1" y="1" width="${W - 2}" height="${h - 2}" rx="9" fill="${C.card}" stroke="${C.line}"/>
+  ${icon ? badgeIcon(icon, pad + 10, cy) : ''}
+  <text x="${tx}" y="${cy + 5}" fill="${C.ink}" font-size="14" font-weight="600" ${F}>${esc(label)}</text>
+</svg>`;
+}
+
+// The hero social row and the donate row, as pill badges.
+const HERO_BADGES = [
+  { file: 'telegram', label: 'Telegram', icon: 'telegram', href: 'https://t.me/nerual_dreming' },
+  { file: 'website', label: 'neuro-cartel.com', icon: 'globe', href: 'https://neuro-cartel.com' },
+  { file: 'youtube', label: 'YouTube', icon: 'youtube', href: 'https://www.youtube.com/@nerual_dreming' },
+  { file: 'support', label: 'Support', icon: 'heart', href: 'https://timoncool.github.io/YuE2-Studio/donate.html' },
+];
+const DONATE_BADGES = [
+  { file: 'donate', label: 'All donation methods', icon: 'heart', href: 'https://timoncool.github.io/YuE2-Studio/donate.html' },
+  { file: 'card', label: 'Bank card — dalink.to', icon: 'card', href: 'https://dalink.to/nerual_dreming' },
+  { file: 'boosty', label: 'Boosty', icon: 'spark', href: 'https://boosty.to/neuro_art' },
+];
+
 const DEVLABEL = { en: 'DEVELOPMENT', ru: 'РАЗРАБОТКА', zh: '开发', ja: '開発', ko: '개발', pt: 'DESENVOLVIMENTO', es: 'DESARROLLO', fr: 'DÉVELOPPEMENT' };
 
 function usageSvg(s, lang) {
@@ -177,7 +219,7 @@ function usageSvg(s, lang) {
     { n: fmt(s.totals.installs), l: t.installs, ic: 'dl' },
     { n: fmt(realLen(s.countries)) + (hasOther(s.countries) ? '+' : ''), l: t.countries, ic: 'globe' },
     { n: fmt(realLen(s.languages)) + (hasOther(s.languages) ? '+' : ''), l: t.languages, ic: 'lang' },
-  ], t.eyebrow, t.tel_h);
+  ], t.eyebrow, t.tel_h, (NOTE[lang] || NOTE.en).usage);
 }
 
 // Catmull-Rom through the points, emitted as a smooth cubic-bezier path.
@@ -235,7 +277,7 @@ function monthTicks(activity, x0, w, y) {
 function devSvg(s, lang) {
   const t = T[lang] || T.en;
   const d = s.dev || {};
-  const W = 840, H = 264;
+  const W = 840, H = 242;
   const cells = [
     { n: fmt(d.commits), l: t.commits, ic: 'commit' },
     { n: fmt(d.issues_closed), l: t.issues, ic: 'issue' },
@@ -246,20 +288,23 @@ function devSvg(s, lang) {
   const stats = cells.map((c, i) => {
     const x = 24 + cw * i + cw / 2;
     const gx = x - (22 + numWidth(c.n, 17)) / 2; // centre the icon+number group
-    return kpiIcon(c.ic, gx + 8, 62) +
-      `<text x="${gx + 24}" y="72" fill="${C.ink}" font-size="30" font-weight="800" ${F}>${esc(c.n)}</text>` +
-      `<text x="${x}" y="92" text-anchor="middle" fill="${C.mut}" font-size="13" ${F}>${esc(c.l)}</text>`;
+    return kpiIcon(c.ic, gx + 8, 34) +
+      `<text x="${gx + 24}" y="44" fill="${C.ink}" font-size="30" font-weight="800" ${F}>${esc(c.n)}</text>` +
+      `<text x="${x}" y="64" text-anchor="middle" fill="${C.mut}" font-size="13" ${F}>${esc(c.l)}</text>`;
   }).join('');
-  const seps = cells.slice(1).map((_, i) => `<line x1="${24 + cw * (i + 1)}" y1="44" x2="${24 + cw * (i + 1)}" y2="94" stroke="${C.line}"/>`).join('');
+  const seps = cells.slice(1).map((_, i) => `<line x1="${24 + cw * (i + 1)}" y1="14" x2="${24 + cw * (i + 1)}" y2="66" stroke="${C.line}"/>`).join('');
   const series = (d.activity || []).map((p) => p.c);
-  const graph = areaGraph(series, 24, 108, W - 48, 128, 'devg');
-  const ticks = monthTicks(d.activity || [], 24, W - 48, 254);
+  const graph = areaGraph(series, 24, 82, W - 48, 108, 'devg');
+  const ticks = monthTicks(d.activity || [], 24, W - 48, 206);
+  const note = (NOTE[lang] || NOTE.en).dev;
   return `<svg xmlns="http://www.w3.org/2000/svg" width="${W}" height="${H}" viewBox="0 0 ${W} ${H}" role="img" aria-label="${esc(t.dev_h)}">
   <rect x="1" y="1" width="${W - 2}" height="${H - 2}" rx="16" fill="${C.card}" stroke="${C.line}"/>
   <rect x="1" y="1" width="6" height="${H - 2}" rx="3" fill="${C.acc}"/>
-  <text x="24" y="28" fill="${C.acc2}" font-size="13" font-weight="700" letter-spacing="2" ${F}>${esc(DEVLABEL[lang] || DEVLABEL.en)}</text>
-  <text x="${W - 24}" y="28" text-anchor="end" fill="${C.mut}" font-size="13" ${F}>${esc(t.dev_sub)}</text>
   ${seps}${stats}${graph}${ticks}
+  <line x1="24" y1="216" x2="${W - 24}" y2="216" stroke="${C.line}"/>
+  <text x="24" y="231" fill="${C.acc2}" font-size="11.5" font-weight="700" letter-spacing="1.5" ${F}>${esc(DEVLABEL[lang] || DEVLABEL.en)}</text>
+  <text x="${W / 2}" y="231" text-anchor="middle" fill="${C.mut}" font-size="11" ${F}>${esc(note)}</text>
+  <text x="${W - 24}" y="231" text-anchor="end" fill="${C.mut}" font-size="11.5" ${F}>${esc(t.dev_sub)}</text>
 </svg>`;
 }
 
@@ -449,12 +494,10 @@ const NOTE = {
 
 const HERO = `<a href="https://github.com/timoncool">
   <img src="https://readme-typing-svg.demolab.com/?lines=Free+local+AI+apps+for+everyone;Music+%C2%B7+Speech+%C2%B7+Video;Portable.+One+click.+Local-first.;Co-Founder+of+ArtGeneration.me&font=Fira+Code&center=true&width=500&height=50&color=58a6ff&vCenter=true&pause=1000&size=20" alt="" />
-</a>
+</a>`;
 
-[![Telegram](https://img.shields.io/badge/Telegram-nerual__dreming-26A5E4?style=for-the-badge&logo=telegram&logoColor=white)](https://t.me/nerual_dreming)
-[![Website](https://img.shields.io/badge/neuro--cartel.com-000?style=for-the-badge&logo=google-chrome&logoColor=white)](https://neuro-cartel.com)
-[![YouTube](https://img.shields.io/badge/YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white)](https://www.youtube.com/@nerual_dreming)
-[![Sponsor](https://img.shields.io/badge/Sponsor-ea4aaa?style=for-the-badge&logo=githubsponsors&logoColor=white)](https://timoncool.github.io/YuE2-Studio/donate.html)`;
+// a row of linked pill badges
+const badgeRow = (badges) => badges.map((b) => `<a href="${b.href}"><img src="dist/badge-${b.file}.svg" height="34" alt="${esc(b.label)}"></a>`).join('\n');
 
 const TECH = `<details>
 <summary><h4>__TECH__</h4></summary>
@@ -481,11 +524,11 @@ ${switcher}
 
 ${HERO}
 
+${badgeRow(HERO_BADGES)}
+
 <a href="${STATS_PAGE}"><img src="dist/usage-${lang}.svg" alt="${esc(t.tel_h)}" width="840"></a>
 
 **[${t.tel_see}](${STATS_PAGE})**
-
-<sub>${note.usage}</sub>
 
 </div>
 
@@ -496,8 +539,6 @@ ${linkGrid(FEATURED, lang)}
 ### ${t.dev_h}
 
 <img src="dist/dev-${lang}.svg" alt="${esc(t.dev_h)}" width="840">
-
-<sub>${note.dev}</sub>
 
 ### ${sec.more}
 
@@ -513,9 +554,7 @@ ${TECH.replace('__TECH__', sec.tech)}
 
 ${SUP[lang] || SUP.en}
 
-[![All donation methods](https://img.shields.io/badge/All_donation_methods-ea4aaa?style=for-the-badge&logo=githubsponsors&logoColor=white)](https://timoncool.github.io/YuE2-Studio/donate.html)
-[![dalink.to](https://img.shields.io/badge/Bank_card-dalink.to-29ABE2?style=for-the-badge&logo=stripe&logoColor=white)](https://dalink.to/nerual_dreming)
-[![Boosty](https://img.shields.io/badge/Monthly-Boosty-F15F2C?style=for-the-badge)](https://boosty.to/neuro_art)
+${badgeRow(DONATE_BADGES)}
 
 <sub>
 
@@ -548,6 +587,7 @@ async function main() {
   await mkdir(join(ROOT, 'dist'), { recursive: true });
   await writeFile(join(ROOT, 'stats.json'), JSON.stringify(stats, null, 2) + '\n');
   for (const c of CATS) await writeFile(join(ROOT, 'dist', `cat-${c.icon}.svg`), catIcon(c.icon));
+  for (const b of [...HERO_BADGES, ...DONATE_BADGES]) await writeFile(join(ROOT, 'dist', `badge-${b.file}.svg`), badgeSvg(b.label, b.icon));
   // one tile per project per language (localized description), so each card is its own clickable link
   const catItems = CATS.flatMap((c) => c.items.map((it) => ({ ...it, stars: starsOf(it.repo), downloads: dlOf(it.repo) })));
   const allTiles = [...featured, ...catItems];
