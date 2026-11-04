@@ -5,5 +5,5 @@
   <line x1="24" y1="78" x2="816" y2="78" stroke="#30363d"/>
   <text x="24" y="93" fill="#58a6ff" font-size="11.5" font-weight="700" letter-spacing="1.5" font-family="'Segoe UI',system-ui,-apple-system,sans-serif">USAGE EN DIRECT</text>
   <text x="816" y="93" text-anchor="end" fill="#8b949e" font-size="11.5" font-family="'Segoe UI',system-ui,-apple-system,sans-serif">Qui utilise mes applications</text>
-  <text x="420" y="93" text-anchor="middle" fill="#8b949e" font-size="11" font-family="'Segoe UI',system-ui,-apple-system,sans-serif">Usage anonyme et volontaire, depuis les applis — agrégé, sans données personnelles, mis à jour chaque jour.</text>
+  <text x="420" y="93" text-anchor="middle" fill="#8b949e" font-size="11" font-family="'Segoe UI',system-ui,-apple-system,sans-serif">Anonyme · volontaire · quotidien</text>
 </svg>

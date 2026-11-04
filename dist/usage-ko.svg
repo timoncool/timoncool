@@ -5,5 +5,5 @@
   <line x1="24" y1="78" x2="816" y2="78" stroke="#30363d"/>
   <text x="24" y="93" fill="#58a6ff" font-size="11.5" font-weight="700" letter-spacing="1.5" font-family="'Segoe UI',system-ui,-apple-system,sans-serif">실시간 사용</text>
   <text x="816" y="93" text-anchor="end" fill="#8b949e" font-size="11.5" font-family="'Segoe UI',system-ui,-apple-system,sans-serif">누가 사용하나</text>
-  <text x="420" y="93" text-anchor="middle" fill="#8b949e" font-size="11" font-family="'Segoe UI',system-ui,-apple-system,sans-serif">익명·동의 기반, 앱 내부에서 집계 — 개인정보 없음, 매일 갱신.</text>
+  <text x="420" y="93" text-anchor="middle" fill="#8b949e" font-size="11" font-family="'Segoe UI',system-ui,-apple-system,sans-serif">익명 · 동의 · 매일 갱신</text>
 </svg>

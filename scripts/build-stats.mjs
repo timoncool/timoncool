@@ -482,14 +482,14 @@ const SUP = {
 
 // What each stat family is and how often it refreshes — usage (ours, from the apps) vs GitHub (public API).
 const NOTE = {
-  en: { usage: 'Anonymous, opt-in usage from inside the apps — aggregated, no personal data, refreshed daily.', dev: 'Public activity from the GitHub API — refreshed daily.' },
-  ru: { usage: 'Анонимно и по согласию, из самих приложений — агрегировано, без личных данных, обновляется раз в сутки.', dev: 'Открытая активность из GitHub API — обновляется раз в сутки.' },
-  zh: { usage: '匿名且经用户同意，来自应用内部 — 聚合统计、无个人数据，每日更新。', dev: '来自 GitHub API 的公开活动 — 每日更新。' },
-  ja: { usage: '匿名・オプトイン、アプリ内から集計 — 個人データなし、毎日更新。', dev: 'GitHub API の公開アクティビティ — 毎日更新。' },
-  ko: { usage: '익명·동의 기반, 앱 내부에서 집계 — 개인정보 없음, 매일 갱신.', dev: 'GitHub API의 공개 활동 — 매일 갱신.' },
-  pt: { usage: 'Uso anônimo e opcional, de dentro dos apps — agregado, sem dados pessoais, atualizado diariamente.', dev: 'Atividade pública via GitHub API — atualizada diariamente.' },
-  es: { usage: 'Uso anónimo y opcional, desde dentro de las apps — agregado, sin datos personales, actualizado a diario.', dev: 'Actividad pública vía GitHub API — actualizada a diario.' },
-  fr: { usage: "Usage anonyme et volontaire, depuis les applis — agrégé, sans données personnelles, mis à jour chaque jour.", dev: "Activité publique via l’API GitHub — mise à jour chaque jour." },
+  en: { usage: 'Anonymous · opt-in · daily', dev: 'GitHub API · daily' },
+  ru: { usage: 'Анонимно · по согласию · раз в сутки', dev: 'GitHub API · раз в сутки' },
+  zh: { usage: '匿名 · 经同意 · 每日更新', dev: 'GitHub API · 每日更新' },
+  ja: { usage: '匿名 · 同意制 · 毎日更新', dev: 'GitHub API · 毎日更新' },
+  ko: { usage: '익명 · 동의 · 매일 갱신', dev: 'GitHub API · 매일 갱신' },
+  pt: { usage: 'Anônimo · opcional · diário', dev: 'GitHub API · diário' },
+  es: { usage: 'Anónimo · opcional · a diario', dev: 'GitHub API · a diario' },
+  fr: { usage: 'Anonyme · volontaire · quotidien', dev: 'API GitHub · quotidien' },
 };
 
 const HERO = `<a href="https://github.com/timoncool">
