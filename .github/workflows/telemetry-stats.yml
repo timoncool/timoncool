@@ -1,4 +1,4 @@
-name: Open telemetry stats
+name: Update profile stats
 
 on:
   schedule:
@@ -9,6 +9,11 @@ on:
     paths:
       - scripts/build-stats.mjs
       - .github/workflows/telemetry-stats.yml
+
+# One light run at a time: 1 GraphQL + ~25 REST + 1 hub fetch, no npm install, no build artifacts.
+concurrency:
+  group: profile-stats
+  cancel-in-progress: true
 
 jobs:
   build:
@@ -28,4 +33,4 @@ jobs:
         uses: EndBug/add-and-commit@v9
         with:
           add: "stats.json dist README.md README.*.md"
-          message: "Update open telemetry stats"
+          message: "Update profile stats"
