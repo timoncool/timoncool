@@ -78,4 +78,4 @@ Je crée des applis IA gratuites, open-source et local-first pour tous. Votre so
 
 </div>
 
-<div align="center"><sub>Mis à jour: 2026-11-07 · Les chiffres d'usage sont actualisés chaque jour à partir de statistiques anonymes.</sub></div>
+<div align="center"><sub>Mis à jour: 2026-11-08 · Les chiffres d'usage sont actualisés chaque jour à partir de statistiques anonymes.</sub></div>

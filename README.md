@@ -78,4 +78,4 @@ I build free, open-source, local-first AI apps for everyone. Your support keeps 
 
 </div>
 
-<div align="center"><sub>Updated: 2026-11-07 · Usage numbers update daily from anonymous, opt-in stats.</sub></div>
+<div align="center"><sub>Updated: 2026-11-08 · Usage numbers update daily from anonymous, opt-in stats.</sub></div>
