@@ -176,6 +176,7 @@ function badgeIcon(type, cx, cy) {
   const s = `fill="none" stroke="${C.acc2}" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"`;
   const d = C.acc2;
   if (type === 'telegram') return `<path d="M${cx + 9},${cy - 7} L${cx - 9},${cy} L${cx - 3},${cy + 2.5} L${cx - 1},${cy + 7} L${cx + 1.5},${cy + 3} L${cx + 5},${cy + 6} Z" ${s}/>`;
+  if (type === 'x') return `<path d="M${cx - 7},${cy - 7} L${cx + 7},${cy + 7} M${cx + 7},${cy - 7} L${cx - 7},${cy + 7}" ${s}/>`;
   if (type === 'globe') return `<g ${s}><circle cx="${cx}" cy="${cy}" r="8"/><ellipse cx="${cx}" cy="${cy}" rx="3.4" ry="8"/><path d="M${cx - 8},${cy} L${cx + 8},${cy}"/></g>`;
   if (type === 'youtube') return `<g ${s}><rect x="${cx - 9}" y="${cy - 6.5}" width="18" height="13" rx="4"/><path d="M${cx - 2.5},${cy - 3} L${cx + 4},${cy} L${cx - 2.5},${cy + 3} Z" fill="${d}" stroke="none"/></g>`;
   if (type === 'heart') return `<path d="M${cx},${cy + 6.5} C${cx - 9},${cy - 1} ${cx - 6},${cy - 8} ${cx - 2.5},${cy - 5} C${cx - 1},${cy - 3.8} ${cx},${cy - 2.5} ${cx},${cy - 2.5} C${cx},${cy - 2.5} ${cx + 1},${cy - 3.8} ${cx + 2.5},${cy - 5} C${cx + 6},${cy - 8} ${cx + 9},${cy - 1} ${cx},${cy + 6.5} Z" fill="${d}" stroke="none"/>`;
@@ -200,6 +201,7 @@ function badgeSvg(label, icon) {
 // The hero social row and the donate row, as pill badges.
 const HERO_BADGES = [
   { file: 'telegram', label: 'Telegram', icon: 'telegram', href: 'https://t.me/nerual_dreming' },
+  { file: 'x', label: 'X', icon: 'x', href: 'https://x.com/nerualdreming' },
   { file: 'youtube', label: 'YouTube', icon: 'youtube', href: 'https://www.youtube.com/@nerual_dreming' },
   { file: 'support', label: 'Support', icon: 'heart', href: 'https://timoncool.github.io/YuE2-Studio/donate.html' },
 ];
