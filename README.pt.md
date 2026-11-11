@@ -7,6 +7,7 @@
 </a>
 
 <a href="https://t.me/nerual_dreming"><img src="dist/badge-telegram-pt.svg" height="34" alt="Telegram"></a>
+<a href="https://x.com/nerualdreming"><img src="dist/badge-x-pt.svg" height="34" alt="X"></a>
 <a href="https://www.youtube.com/@nerual_dreming"><img src="dist/badge-youtube-pt.svg" height="34" alt="YouTube"></a>
 <a href="https://timoncool.github.io/YuE2-Studio/donate.html"><img src="dist/badge-support-pt.svg" height="34" alt="Support"></a>
 
@@ -78,4 +79,4 @@ Crio apps de IA gratuitos, open-source e local-first para todos. Seu apoio os ma
 
 </div>
 
-<div align="center"><sub>Atualizado: 2026-11-10 · Os números de uso são atualizados diariamente a partir de estatísticas anônimas.</sub></div>
+<div align="center"><sub>Atualizado: 2026-11-11 · Os números de uso são atualizados diariamente a partir de estatísticas anônimas.</sub></div>

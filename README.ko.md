@@ -7,6 +7,7 @@
 </a>
 
 <a href="https://t.me/nerual_dreming"><img src="dist/badge-telegram-ko.svg" height="34" alt="Telegram"></a>
+<a href="https://x.com/nerualdreming"><img src="dist/badge-x-ko.svg" height="34" alt="X"></a>
 <a href="https://www.youtube.com/@nerual_dreming"><img src="dist/badge-youtube-ko.svg" height="34" alt="YouTube"></a>
 <a href="https://timoncool.github.io/YuE2-Studio/donate.html"><img src="dist/badge-support-ko.svg" height="34" alt="Support"></a>
 
@@ -78,4 +79,4 @@
 
 </div>
 
-<div align="center"><sub>업데이트: 2026-11-10 · 사용 수치는 익명 통계에서 매일 갱신됩니다.</sub></div>
+<div align="center"><sub>업데이트: 2026-11-11 · 사용 수치는 익명 통계에서 매일 갱신됩니다.</sub></div>

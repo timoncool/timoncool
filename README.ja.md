@@ -7,6 +7,7 @@
 </a>
 
 <a href="https://t.me/nerual_dreming"><img src="dist/badge-telegram-ja.svg" height="34" alt="Telegram"></a>
+<a href="https://x.com/nerualdreming"><img src="dist/badge-x-ja.svg" height="34" alt="X"></a>
 <a href="https://www.youtube.com/@nerual_dreming"><img src="dist/badge-youtube-ja.svg" height="34" alt="YouTube"></a>
 <a href="https://timoncool.github.io/YuE2-Studio/donate.html"><img src="dist/badge-support-ja.svg" height="34" alt="Support"></a>
 
@@ -78,4 +79,4 @@
 
 </div>
 
-<div align="center"><sub>更新: 2026-11-10 · 利用数は匿名の統計から毎日更新されます。</sub></div>
+<div align="center"><sub>更新: 2026-11-11 · 利用数は匿名の統計から毎日更新されます。</sub></div>
