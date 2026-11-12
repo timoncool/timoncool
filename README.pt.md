@@ -79,4 +79,4 @@ Crio apps de IA gratuitos, open-source e local-first para todos. Seu apoio os ma
 
 </div>
 
-<div align="center"><sub>Atualizado: 2026-11-11 · Os números de uso são atualizados diariamente a partir de estatísticas anônimas.</sub></div>
+<div align="center"><sub>Atualizado: 2026-11-12 · Os números de uso são atualizados diariamente a partir de estatísticas anônimas.</sub></div>

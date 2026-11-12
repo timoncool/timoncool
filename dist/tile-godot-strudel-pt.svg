@@ -4,5 +4,5 @@
   <text x="20" y="34" fill="#e6edf3" font-size="16.5" font-weight="700" font-family="'Segoe UI',system-ui,-apple-system,sans-serif">Strudel for Godot</text>
   <text x="20" y="57" fill="#8b949e" font-size="12.5" font-family="'Segoe UI',system-ui,-apple-system,sans-serif">O motor de live-coding Strudel portado</text><text x="20" y="74" fill="#8b949e" font-size="12.5" font-family="'Segoe UI',system-ui,-apple-system,sans-serif">para GDScript — os padrões tocam dentro do</text><text x="20" y="91" fill="#8b949e" font-size="12.5" font-family="'Segoe UI',system-ui,-apple-system,sans-serif">jogo.</text>
   <line x1="288" y1="16" x2="288" y2="96" stroke="#30363d"/>
-  <text x="306" y="61" text-anchor="middle" fill="#58a6ff" font-size="17" font-family="'Segoe UI',system-ui,-apple-system,sans-serif">★</text><text x="328" y="60" fill="#e6edf3" font-size="16" font-weight="700" font-family="'Segoe UI',system-ui,-apple-system,sans-serif">11</text>
+  <text x="306" y="61" text-anchor="middle" fill="#58a6ff" font-size="17" font-family="'Segoe UI',system-ui,-apple-system,sans-serif">★</text><text x="328" y="60" fill="#e6edf3" font-size="16" font-weight="700" font-family="'Segoe UI',system-ui,-apple-system,sans-serif">13</text>
 </svg>
