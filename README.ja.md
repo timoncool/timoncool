@@ -79,4 +79,4 @@
 
 </div>
 
-<div align="center"><sub>更新: 2026-11-12 · 利用数は匿名の統計から毎日更新されます。</sub></div>
+<div align="center"><sub>更新: 2026-11-13 · 利用数は匿名の統計から毎日更新されます。</sub></div>
