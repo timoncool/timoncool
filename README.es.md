@@ -79,4 +79,4 @@ Creo apps de IA gratuitas, open-source y local-first para todos. Tu apoyo las ma
 
 </div>
 
-<div align="center"><sub>Actualizado: 2026-11-15 · Los números de uso se actualizan a diario desde estadísticas anónimas.</sub></div>
+<div align="center"><sub>Actualizado: 2026-11-18 · Los números de uso se actualizan a diario desde estadísticas anónimas.</sub></div>
